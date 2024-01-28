@@ -1,0 +1,89 @@
+picture {
+  --frame-size: 5px;
+  --frame-color: var(--text-color);
+
+  position: relative;
+  padding: calc(2 * var(--frame-size));
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 2/3;
+  background-color: #fff;
+}
+
+picture::before {
+  position: absolute;
+  content: "";
+  z-index: 3;
+  inset: 0;
+
+  border: calc(2 * var(--frame-size)) solid #0000;
+  outline: 1px solid var(--frame-color);
+  outline-offset: calc(-1 * var(--frame-size));
+  background: conic-gradient(
+    from 90deg at 1px 1px,
+    #0000 25%,
+    var(--frame-color) 0
+  );
+}
+
+picture[state]::after {
+  position: absolute;
+  inset: calc(2 * var(--frame-size));
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3rem;
+  background-color: #00000088;
+}
+
+picture[state="eliminated"]::after {
+  content: "❌";
+}
+
+picture[state="quitter"]::after {
+  content: "🦠";
+}
+
+picture[state="winner"]::after {
+  content: "🏆";
+  background: none;
+}
+
+picture[position]::after {
+  content: attr(position);
+}
+
+picture ~ span {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+picture ~ .votes {
+  position: absolute;
+  z-index: 3;
+  right: -0.75rem;
+  top: 1rem;
+}
+
+/* Themes */
+.rounded picture img,
+.rounded picture::after {
+  border-radius: 0.5rem;
+}
+
+.rounded picture::before {
+  display: none;
+}
+
+.rounded picture img {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}

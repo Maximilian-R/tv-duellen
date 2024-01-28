@@ -1,0 +1,7 @@
+.theme-white {
+  --text-color: #fff;
+}
+
+.theme-white picture ~ span {
+  text-shadow: 0 0 6px #ffffff;
+}

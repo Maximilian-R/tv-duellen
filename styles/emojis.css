@@ -1,0 +1,34 @@
+.emojis {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+.emojis.animate > div {
+  text-shadow: 0 0 6px rgb(0 0 0 / 50%);
+  animation-name: animateIn;
+  animation-duration: 300ms;
+  animation-delay: calc(var(--animation-order) * 100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+
+.emojis.enter > div {
+  animation-play-state: running;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

@@ -1,0 +1,105 @@
+.votes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  --vote-size: 3rem;
+}
+
+.vote {
+  width: var(--vote-size);
+  height: var(--vote-size);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  background-color: pink;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sono", monospace;
+  box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+}
+
+.votes.animate .vote {
+  animation-name: animateIn;
+  animation-duration: 300ms;
+  animation-delay: calc(var(--animation-order) * 100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+
+.votes.enter .vote {
+  animation-play-state: running;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--vote-size)));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vote[data-primary="false"] {
+  background-color: #282828 !important;
+  color: white;
+}
+
+.vote[data-more] {
+  background-color: #282828;
+}
+
+.vote {
+  --color-h: calc(360 / 8);
+  --color-s: 80%;
+  --color-l: 55%;
+  background-color: hsl(
+    calc(var(--color-h) * var(--index)) var(--color-s) var(--color-l)
+  );
+  color: white;
+}
+
+.vote[data-name="AR"] {
+  background-color: rgb(8, 170, 210);
+  --index: 0;
+}
+
+.vote[data-name="ER"] {
+  background-color: rgb(219, 219, 29);
+  --index: 1;
+}
+
+.vote[data-name="FL"] {
+  background-color: rgb(34, 59, 248);
+  --index: 2;
+}
+
+.vote[data-name="JR"] {
+  background-color: rgb(151, 28, 233);
+  --index: 3;
+}
+
+.vote[data-name="LR"] {
+  background-color: rgb(248, 155, 34);
+  --index: 4;
+}
+
+.vote[data-name="MR"] {
+  background-color: rgb(202, 7, 121);
+  --index: 5;
+}
+
+.vote[data-name="RS"] {
+  background-color: rgb(31, 194, 31);
+  --index: 6;
+}
+
+.vote[data-name="OR"] {
+  background-color: rgb(232, 49, 49);
+  --index: 7;
+}

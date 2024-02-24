@@ -1,0 +1,115 @@
+@layer default, theme;
+
+@import url("https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap");
+@import "./votes.css";
+@import "./picture.css";
+@import "./emojis.css";
+
+@import "./themes/white.css" layer(theme);
+@import "./themes/backgrounds.css" layer(theme);
+
+@layer default {
+  body,
+  html,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --text-color: #282828;
+  }
+
+  html {
+    font-size: min(2vw, 30px);
+  }
+
+  @media screen and (max-width: 900px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  body {
+    margin: 0 auto;
+    max-width: min(100vw, 1400px);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    font-family: "Sono", monospace;
+    color: var(--text-color);
+  }
+
+  main {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1rem 1rem;
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  a {
+    text-align: center;
+    display: inline-block;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    background-color: #282828;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  a:focus-visible {
+    outline: var(--text-color) dashed 3px;
+  }
+
+  a:hover {
+    box-shadow: 0px 6px 6px #00000061;
+    transform: translate(0px, -6px);
+  }
+
+  .qoute {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 2rem 1rem;
+    align-items: center;
+    position: relative;
+  }
+}

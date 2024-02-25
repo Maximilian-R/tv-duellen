@@ -3,6 +3,7 @@
   content: "";
   display: block;
   inset: 0;
+  bottom: unset;
   position: fixed;
   width: 100lvw;
   height: 100lvh;

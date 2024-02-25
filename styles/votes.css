@@ -58,15 +58,14 @@
   --color-h: calc(360 / 8);
   --color-s: 80%;
   --color-l: 55%;
-  background-color: hsl(
+  /* background-color: hsl(
     calc(var(--color-h) * var(--index)) var(--color-s) var(--color-l)
   );
   background: radial-gradient(
     at right top,
     hsl(calc(var(--color-h) * var(--index) - 20) var(--color-s) var(--color-l)),
     hsl(calc(var(--color-h) * var(--index) + 20) var(--color-s) var(--color-l))
-  );
-
+  ); */
   color: white;
 }
 

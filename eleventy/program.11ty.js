@@ -14,7 +14,8 @@ export default {
     permalink: ({ game }) =>
       `program/${slugify(game.meta.name)}/${game.meta.year}/index.html`,
     eleventyComputed: {
-      title: ({ game }) => `${game.meta.name} ${game.meta.year}`,
+      title: ({ game }) =>
+        `${game.meta.short ?? game.meta.name} ${game.meta.year}`,
       themes: ({ game }) => game.theme,
     },
   },

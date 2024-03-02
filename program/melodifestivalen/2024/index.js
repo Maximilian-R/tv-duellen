@@ -18,9 +18,9 @@ game.contestant("Maria Sur");
 game.contestant("Smash Into Pieces");
 game.contestant("Danny Saucedo");
 game.contestant("Dotter");
-game.contestant("TBA");
-game.contestant("TBA");
-game.contestant("TBA");
-game.contestant("TBA");
+game.contestant("Jay Smith");
+game.contestant("Annika Wickihalder");
+game.contestant("Marcus & Martinus");
+game.contestant("Medina");
 
 export { game };

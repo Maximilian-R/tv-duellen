@@ -8,7 +8,7 @@ const game = new Game(
 game.contestant("Maxine").bet("AR").bet("OR");
 game.contestant("Ciro").eliminate().bet("JR");
 game.contestant("Tim").bet("RS");
-game.contestant("Desirée S").elminate().bet("MR");
+game.contestant("Desirée S").eliminate().bet("MR");
 game.contestant("Magnus").bet("JR", false).bet("MR", false).bet("OR", false);
 game.contestant("Cornelia G").bet("AR", false);
 game.contestant("Jennifer").eliminate().bet("RS", false);

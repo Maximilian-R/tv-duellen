@@ -12,15 +12,15 @@ const game = new Game(
 );
 game.contestant("Lisa Ajax");
 game.contestant("Cazzi Opeia");
-game.contestant("Jacqline");
+game.contestant("Jacqline").bet("OR").bet("JR",false);
 game.contestant("Liamoo");
 game.contestant("Maria Sur");
 game.contestant("Smash Into Pieces");
-game.contestant("Danny Saucedo");
+game.contestant("Danny Saucedo").bet("LR",false).bet("AR",false);
 game.contestant("Dotter");
-game.contestant("Jay Smith");
-game.contestant("Annika Wickihalder");
-game.contestant("Marcus & Martinus");
-game.contestant("Medina");
+game.contestant("Jay Smith").bet("RS",false);
+game.contestant("Annika Wickihalder").bet("RS").bet("MR");
+game.contestant("Marcus & Martinus").bet("JR").bet("LR").bet("AR").bet("OR",false);
+game.contestant("Medina").bet("MR",false);
 
 export { game };

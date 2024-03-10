@@ -20,7 +20,7 @@ game.contestant("Danny Saucedo").bet("LR",false).bet("AR",false).eliminate();
 game.contestant("Dotter").eliminate();
 game.contestant("Jay Smith").bet("RS",false).bet("MS").bet("MS",false).eliminate();
 game.contestant("Annika Wickihalder").bet("RS").bet("MR").bet("MS").eliminate();
-game.contestant("Marcus & Martinus").bet("JR").bet("LR").bet("AR").bet("OR",false).winner();
+game.contestant("Marcus & Martinus").bet("JR").bet("LR").bet("AR").bet("OR",false).win();
 game.contestant("Medina").bet("MR",false).eliminate();
 
 export { game };

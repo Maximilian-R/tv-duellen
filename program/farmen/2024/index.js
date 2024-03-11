@@ -5,12 +5,17 @@ const game = new Game(
   ["farmen"],
   ["🥕", "🌽", "🥔"]
 );
-game.contestant("Maxine").bet("AR").bet("OR");
+game.contestant("Maxine").eliminate().bet("AR").bet("OR");
 game.contestant("Ciro").eliminate().bet("JR");
 game.contestant("Tim").bet("RS");
 game.contestant("Desirée S").eliminate().bet("MR");
-game.contestant("Magnus").eliminate().bet("JR", false).bet("MR", false).bet("OR", false);
-game.contestant("Cornelia G").bet("AR", false);
+game
+  .contestant("Magnus")
+  .eliminate()
+  .bet("JR", false)
+  .bet("MR", false)
+  .bet("OR", false);
+game.contestant("Cornelia G").eliminate().bet("AR", false);
 game.contestant("Jennifer").eliminate().bet("RS", false);
 game.contestant("Andreas").eliminate();
 game.contestant("Per R");

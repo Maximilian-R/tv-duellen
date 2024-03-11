@@ -25,9 +25,9 @@ export class Game {
   sortContestants() {
     this.contestants
       .sort((a, b) => a.name.localeCompare(b.name))
-      .sort((a, b) => states[a.state] - states[b.state])
       .sort((a, b) => b.secondaryVotes - a.secondaryVotes)
       .sort((a, b) => b.primaryVotes - a.primaryVotes)
+      .sort((a, b) => states[a.state] - states[b.state])
       .sort(
         (a, b) =>
           (a.state === "winner" ? 0 : 1) - (b.state === "winner" ? 0 : 1)

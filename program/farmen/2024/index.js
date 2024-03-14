@@ -18,7 +18,7 @@ game
 game.contestant("Cornelia G").eliminate().bet("AR", false);
 game.contestant("Jennifer").eliminate().bet("RS", false);
 game.contestant("Andreas").eliminate();
-game.contestant("Per R");
+game.contestant("Per R").eliminate();
 game.contestant("Fredrik");
 game.contestant("Anna").eliminate();
 game.contestant("Martina").quit();

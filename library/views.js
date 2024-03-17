@@ -8,6 +8,20 @@ export function renderToString(content) {
   return collectResultSync(output);
 }
 
+export function createLeaderboard(leaderboard) {
+  leaderboard = leaderboard.get();
+  return html`<h2>Leaderboard</h2>
+    <ol class="leaderboard">
+      ${leaderboard.map(
+        ([key, value]) =>
+          html`<li>
+            <div data-name="${key}" class="vote">${key}</div>
+            ${[...Array(value).keys()].map((v) => "🏆")}
+          </li>`
+      )}
+    </ol>`;
+}
+
 export function createGame(game) {
   game.sortContestants();
   return html`${createHeader(game)}${createMain(game)}`;

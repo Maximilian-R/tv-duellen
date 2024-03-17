@@ -1,3 +1,15 @@
+.leaderboard {
+  margin: 1rem 0;
+  --vote-size: 3rem;
+}
+
+.leaderboard > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .votes {
   display: flex;
   flex-direction: column;

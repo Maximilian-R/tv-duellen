@@ -5,6 +5,37 @@ const states = {
   quitter: 2,
 };
 
+export class Leaderboard {
+  constructor(games) {
+    this.games = games;
+  }
+
+  get() {
+    const leaderboard = {};
+
+    this.games.forEach((game) => {
+      game.contestants.forEach((contestant) => {
+        contestant.votes.forEach((vote) => {
+          leaderboard[vote.name] = 0;
+        });
+      });
+    });
+
+    this.games.forEach((game) => {
+      const winner = game.contestants.find(
+        (contestant) => contestant.state === "winner"
+      );
+      const hasPrimary = winner?.votes.some((vote) => vote.primary);
+      winner?.votes
+        .filter((vote) => (hasPrimary ? vote.primary : true))
+        .forEach((vote) => {
+          leaderboard[vote.name] = leaderboard[vote.name] + 1;
+        });
+    });
+    return Object.entries(leaderboard).sort(([_a, a], [_b, b]) => b - a);
+  }
+}
+
 export class Game {
   constructor(meta, theme, emojis) {
     this.meta = meta;
@@ -41,7 +72,6 @@ class Contestant {
     this.img = img;
     this.state = null;
     this.position;
-    this.winner = false;
     this._votes = [];
   }
 

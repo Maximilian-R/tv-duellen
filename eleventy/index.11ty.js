@@ -1,5 +1,10 @@
 import { html } from "@lit-labs/ssr";
-import { renderToString, createEmojis } from "../library/views.js";
+import {
+  renderToString,
+  createEmojis,
+  createLeaderboard,
+} from "../library/views.js";
+import { Leaderboard } from "../library/game.js";
 
 export default {
   data: {
@@ -34,6 +39,11 @@ export default {
                   </li>`
               )}
             </ul>
+            ${createLeaderboard(
+              new Leaderboard(
+                collections.program.map((program) => program.data.game)
+              )
+            )}
           </main>
         </body>
       </html>`;

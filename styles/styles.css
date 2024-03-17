@@ -12,6 +12,7 @@
   body,
   html,
   ul,
+  ol,
   li {
     margin: 0;
     padding: 0;
@@ -59,7 +60,8 @@
     margin: 2rem 0;
   }
 
-  ul {
+  ul,
+  ol {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));

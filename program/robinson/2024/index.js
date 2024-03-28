@@ -14,7 +14,7 @@ game.contestant("Olivia");
 game.contestant("Zayera");
 game.contestant("Simone");
 game.contestant("Karin");
-game.contestant("Desirée");
+game.contestant("Desirée").eliminate();
 game.contestant("Charlotta");
 game.contestant("Helen");
 

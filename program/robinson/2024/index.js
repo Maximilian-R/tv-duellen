@@ -22,7 +22,7 @@ game.contestant("Rooble");
 game.contestant("Pål");
 game.contestant("Pelle");
 game.contestant("Mark");
-game.contestant("Pontus");
+game.contestant("Pontus").eleminate();
 game.contestant("Lars");
 game.contestant("Kemo");
 game.contestant("Marcus");

@@ -6,28 +6,28 @@ const game = new Game(
   ["🌴", "🥥", "🔥"]
 );
 
-game.contestant("Ci");
+game.contestant("Ci").bet("MR").bet("OR", false);
 game.contestant("Alma");
-game.contestant("Hanna");
+game.contestant("Hanna").quit();
 game.contestant("Maureen");
 game.contestant("Olivia");
 game.contestant("Zayera");
 game.contestant("Simone");
 game.contestant("Karin");
 game.contestant("Desirée").eliminate();
-game.contestant("Charlotta");
+game.contestant("Charlotta").bet("RS", false);
 game.contestant("Helen").eliminate();
 
 game.contestant("Rooble");
 game.contestant("Pål");
-game.contestant("Pelle");
-game.contestant("Mark");
+game.contestant("Pelle").bet("AR").bet("JR", false);
+game.contestant("Mark").bet("OR").bet("RS").bet("AR", false);
 game.contestant("Pontus").eliminate();
 game.contestant("Lars");
-game.contestant("Kemo");
-game.contestant("Marcus");
+game.contestant("Marcus").bet("MR", false);
+game.contestant("Kemo").quit();
 game.contestant("Fredrik");
 game.contestant("Gustav");
-game.contestant("Alexander");
+game.contestant("Alexander").bet("JR");
 
 export { game };

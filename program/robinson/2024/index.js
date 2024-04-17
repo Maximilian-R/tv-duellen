@@ -14,7 +14,7 @@ game.contestant("Olivia");
 game.contestant("Zayera");
 game.contestant("Simone");
 game.contestant("Karin");
-game.contestant("Desirée").eliminate();
+game.contestant("Desirée").quit();
 game.contestant("Charlotta").bet("RS", false);
 game.contestant("Helen").eliminate();
 
@@ -26,7 +26,7 @@ game.contestant("Pontus").eliminate();
 game.contestant("Lars");
 game.contestant("Marcus").bet("MR", false);
 game.contestant("Kemo").quit();
-game.contestant("Fredrik");
+game.contestant("Fredrik").quit();
 game.contestant("Gustav");
 game.contestant("Alexander").bet("JR");
 

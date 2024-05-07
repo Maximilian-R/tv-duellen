@@ -6,14 +6,14 @@ const game = new Game(
   ["🌴", "🥥", "🔥"]
 );
 
-game.contestant("Ci").bet("MR").bet("OR", false);
+game.contestant("Ci").eliminate().bet("MR").bet("OR", false);
 game.contestant("Alma");
 game.contestant("Hanna").quit();
 game.contestant("Maureen");
 game.contestant("Olivia");
 game.contestant("Zayera");
 game.contestant("Simone");
-game.contestant("Karin");
+game.contestant("Karin").eliminate();
 game.contestant("Desirée").quit();
 game.contestant("Charlotta").quit().bet("RS", false);
 game.contestant("Helen").eliminate();

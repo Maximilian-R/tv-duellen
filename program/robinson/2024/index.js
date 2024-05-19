@@ -20,14 +20,14 @@ game.contestant("Helen").eliminate();
 
 game.contestant("Rooble");
 game.contestant("Pål");
-game.contestant("Pelle").bet("AR").bet("JR", false);
-game.contestant("Mark").bet("OR").bet("RS").bet("AR", false);
+game.contestant("Pelle").eliminate().bet("AR").bet("JR", false);
+game.contestant("Mark").eliminate().bet("OR").bet("RS").bet("AR", false);
 game.contestant("Pontus").eliminate();
 game.contestant("Lars").quit();
 game.contestant("Marcus").bet("MR", false);
 game.contestant("Kemo").quit();
 game.contestant("Fredrik").quit();
-game.contestant("Gustav");
+game.contestant("Gustav").eliminate();
 game.contestant("Alexander").bet("JR");
 
 export { game };

@@ -9,10 +9,10 @@ const game = new Game(
 game.contestant("Ci").eliminate().bet("MR").bet("OR", false);
 game.contestant("Alma").eliminate();
 game.contestant("Hanna").quit();
-game.contestant("Maureen");
-game.contestant("Olivia");
+game.contestant("Maureen").eliminate();
+game.contestant("Olivia").win();
 game.contestant("Zayera").eliminate();
-game.contestant("Simone");
+game.contestant("Simone").eliminate();
 game.contestant("Karin").eliminate();
 game.contestant("Desirée").quit();
 game.contestant("Charlotta").quit().bet("RS", false);

@@ -12,10 +12,14 @@ export default {
       addAllPagesToCollections: true,
     },
     permalink: ({ game }) =>
-      `program/${slugify(game.meta.name)}/${game.meta.year}/index.html`,
+      `program/${slugify(game.meta.name)}/${game.meta.year}${
+        game.meta.version ? "-" + game.meta.version : ""
+      }/index.html`,
     eleventyComputed: {
       title: ({ game }) =>
-        `${game.meta.short ?? game.meta.name} ${game.meta.year}`,
+        `${game.meta.short ?? game.meta.name} ${game.meta.year}${
+          game.meta.version ? "-" + game.meta.version : ""
+        }`,
       themes: ({ game }) => game.theme,
     },
   },

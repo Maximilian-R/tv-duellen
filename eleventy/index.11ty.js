@@ -6,24 +6,14 @@ import {
 } from "../library/views.js";
 import { Leaderboard } from "../library/game.js";
 
-const hasGroup =
-  typeof Object.groupBy === typeof undefined ||
-  typeof Array.groupToMap === typeof undefined ||
-  typeof Array.group === typeof undefined;
-if (!hasGroup) {
-  const groupBy = (arr, callback) => {
-    return arr.reduce((acc = {}, ...args) => {
-      const key = callback(...args);
-      acc[key] ??= [];
-      acc[key].push(args[0]);
-      return acc;
-    }, {});
-  };
-
-  if (typeof Object.groupBy === typeof undefined) {
-    Object.groupBy = groupBy;
-  }
-}
+const groupBy = (arr, callback) => {
+  return arr.reduce((acc = {}, ...args) => {
+    const key = callback(...args);
+    acc[key] ??= [];
+    acc[key].push(args[0]);
+    return acc;
+  }, {});
+};
 
 export default {
   data: {
@@ -31,7 +21,7 @@ export default {
   },
 
   render: ({ collections }) => {
-    const groups = Object.groupBy(
+    const groups = groupBy(
       collections.program,
       ({ data }) => data.game.meta.name
     );

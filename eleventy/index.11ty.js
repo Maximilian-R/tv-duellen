@@ -12,6 +12,11 @@ export default {
   },
 
   render: ({ collections }) => {
+    const groups = Object.groupBy(
+      collections.program,
+      ({ data }) => data.game.meta.name
+    );
+
     const content = html`<!DOCTYPE html>
       <html lang="sv-SE">
         <head>
@@ -31,14 +36,18 @@ export default {
             ${createEmojis(["🎙️", "🥕", "🌴"])}
           </header>
           <main>
-            <ul>
-              ${collections.program.map(
-                (program) =>
-                  html`<li>
-                    <a href=".${program.page.url}">${program.data.title}</a>
-                  </li>`
-              )}
-            </ul>
+            <h2>Program</h2>
+            ${Object.entries(groups).map(
+              ([key, value]) =>
+                html` <h3>${key}</h3>
+                  <ul>
+                    ${value.map(
+                      (program) => html`<li>
+                        <a href=".${program.page.url}">${program.data.title}</a>
+                      </li>`
+                    )}
+                  </ul>`
+            )}
             ${createLeaderboard(
               new Leaderboard(
                 collections.program.map((program) => program.data.game)

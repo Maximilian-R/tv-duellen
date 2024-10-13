@@ -10,7 +10,8 @@ export function renderToString(content) {
 
 export function createLeaderboard(leaderboard) {
   leaderboard = leaderboard.get();
-  return html`<h2>Leaderboard</h2>
+  return html`<div class="leaderboard-container">
+    <h2>Leaderboard</h2>
     <ol class="leaderboard">
       ${leaderboard.map(
         ([key, value]) =>
@@ -19,7 +20,8 @@ export function createLeaderboard(leaderboard) {
             ${[...Array(value).keys()].map((v) => "🏆")}
           </li>`
       )}
-    </ol>`;
+    </ol>
+  </div>`;
 }
 
 export function createGame(game) {

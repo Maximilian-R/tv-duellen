@@ -1,3 +1,7 @@
+.leaderboard-container {
+  margin-top: 2rem;
+}
+
 .leaderboard {
   margin: 1rem 0;
   --vote-size: 3rem;

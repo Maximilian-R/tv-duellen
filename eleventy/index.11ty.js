@@ -43,7 +43,12 @@ export default {
                   <ul>
                     ${value.map(
                       (program) => html`<li>
-                        <a href=".${program.page.url}">${program.data.title}</a>
+                        <a href=".${program.page.url}"
+                          >${program.data.game.meta.year}${program.data.game
+                            .meta.version
+                            ? "-" + program.data.game.meta.version
+                            : ""}</a
+                        >
                       </li>`
                     )}
                   </ul>`

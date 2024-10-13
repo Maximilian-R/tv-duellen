@@ -1,6 +1,15 @@
+.leaderboard-container {
+  margin-top: 2rem;
+  background: #00000059;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
 .leaderboard {
   margin: 1rem 0;
   --vote-size: 3rem;
+
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
 }
 
 .leaderboard > li {

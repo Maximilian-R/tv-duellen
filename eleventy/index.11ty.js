@@ -30,7 +30,7 @@ export default {
           <script src="./library/animation.js" type="module"></script>
           <title>TV-Duellen</title>
         </head>
-        <body>
+        <body class="default theme-white">
           <header>
             <h1>TV-Duellen</h1>
             ${createEmojis(["🎙️", "🥕", "🌴"])}

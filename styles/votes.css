@@ -82,6 +82,7 @@
   /* background-color: hsl(
     calc(var(--color-h) * var(--index)) var(--color-s) var(--color-l)
   );
+  
   background: radial-gradient(
     at right top,
     hsl(calc(var(--color-h) * var(--index) - 20) var(--color-s) var(--color-l)),

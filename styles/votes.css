@@ -82,7 +82,6 @@
   /* background-color: hsl(
     calc(var(--color-h) * var(--index)) var(--color-s) var(--color-l)
   );
-  
   background: radial-gradient(
     at right top,
     hsl(calc(var(--color-h) * var(--index) - 20) var(--color-s) var(--color-l)),
@@ -132,14 +131,16 @@
 }
 
 .vote[data-name="SB"] {
-  background-color: rgb(218, 200, 44);
+  background-color: rgb(240, 126, 126);
   --index: 8;
 }
 
 .vote[data-name="AMS"] {
+  background-color: rgb(218, 200, 44);
   --index: 9;
 }
 
 .vote[data-name="EMS"] {
+  background-color: rgb(199, 82, 195);
   --index: 10;
 }

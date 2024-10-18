@@ -136,11 +136,9 @@
 }
 
 .vote[data-name="AMS"] {
-  /* background-color: rgb(218, 200, 44); */
   --index: 9;
 }
 
 .vote[data-name="EMS"] {
-  /* background-color: rgb(199, 82, 195); */
   --index: 10;
 }

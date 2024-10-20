@@ -5,7 +5,7 @@ const game = new Game(
   ["idol", "rounded", "theme-white"],
   ["✨", "🎙️", "🎶"],
 );
-game.contestant("Benjamin");
+game.contestant("Benjamin").eliminate();
 game.contestant("Ella").bet("LR");
 game.contestant("Joel");
 game.contestant("Leo").bet("AR");
@@ -16,7 +16,7 @@ game.contestant("Margaux");
 game.contestant("Minou").bet("MR");
 game.contestant("Olivia").bet("SB");
 game.contestant("Paulina").bet("RS");
-game.contestant("Robin H");
+game.contestant("Robin H").eliminate();
 game.contestant("Robin S").bet("OR").bet("ER");
 game.contestant("Victoria");
 

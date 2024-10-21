@@ -18,7 +18,7 @@ export default {
     eleventyComputed: {
       title: ({ game }) =>
         `${game.meta.short ?? game.meta.name} ${game.meta.year}${
-          game.meta.version ? "-" + game.meta.version : ""
+          game.meta.version ? " " + game.meta.versionTitle : ""
         }`,
       themes: ({ game }) => game.theme,
     },

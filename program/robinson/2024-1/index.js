@@ -1,7 +1,7 @@
 import { Game } from "../../../library/game.js";
 
 const game = new Game(
-  { name: "Robinson", year: 2024, version: 1 },
+  { name: "Robinson", year: 2024, version: 1, versionTitle: "Vår" },
   ["robinson", "rounded"],
   ["🌴", "🥥", "🔥"]
 );

@@ -55,7 +55,7 @@ export default {
                         <a href=".${program.page.url}"
                           >${program.data.game.meta.year}${program.data.game
                             .meta.version
-                            ? "-" + program.data.game.meta.version
+                            ? " " + program.data.game.meta.versionTitle
                             : ""}</a
                         >
                       </li>`

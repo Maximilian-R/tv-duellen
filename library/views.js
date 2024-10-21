@@ -33,7 +33,10 @@ export function createHeader({ meta, emojis }) {
   return html`
     <header>
       <a class="home" href="../../../">Tillbaka</a>
-      <h1>${unsafeHTML(meta.title ?? meta.name)} ${meta.year}</h1>
+      <h1>
+        ${unsafeHTML(meta.title ?? meta.name)}
+        ${meta.year}${meta.version ? " " + meta.versionTitle : ""}
+      </h1>
       ${createEmojis(emojis)}
     </header>
   `;

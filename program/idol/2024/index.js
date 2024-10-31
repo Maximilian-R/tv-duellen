@@ -3,7 +3,7 @@ import { Game } from "../../../library/game.js";
 const game = new Game(
   { name: "Idol", year: 2024 },
   ["idol", "rounded", "theme-white"],
-  ["✨", "🎙️", "🎶"],
+  ["✨", "🎙️", "🎶"]
 );
 game.contestant("Benjamin").eliminate();
 game.contestant("Ella").bet("LR");
@@ -15,7 +15,7 @@ game.contestant("Lukas").bet("FL");
 game.contestant("Margaux");
 game.contestant("Minou").bet("MR");
 game.contestant("Olivia").bet("SB");
-game.contestant("Paulina").bet("RS");
+game.contestant("Paulina").bet("RS").eliminate();
 game.contestant("Robin H").eliminate();
 game.contestant("Robin S").bet("OR").bet("ER");
 game.contestant("Victoria");

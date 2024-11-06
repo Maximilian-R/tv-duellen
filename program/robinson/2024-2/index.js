@@ -30,4 +30,7 @@ game.contestant("Lena");
 game.contestant("Amanda B");
 game.contestant("Chris");
 
+game.contestant("Tove");
+game.contestant("Patrik");
+
 export { game };

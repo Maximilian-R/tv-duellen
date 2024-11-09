@@ -7,10 +7,10 @@ const game = new Game(
 );
 
 game.contestant("Maxim");
-game.contestant("Amanda R");
+game.contestant("Amanda R").eliminate();
 game.contestant("Natalie");
 game.contestant("Alva");
-game.contestant("Roger").quit();
+game.contestant("Roger").eliminate();
 game.contestant("Viktor");
 game.contestant("Gertrud");
 
@@ -28,7 +28,7 @@ game.contestant("Ida");
 game.contestant("Ludvig");
 game.contestant("Lena");
 game.contestant("Amanda B");
-game.contestant("Chris");
+game.contestant("Chris").eliminate();
 
 game.contestant("Tove");
 game.contestant("Patrik");

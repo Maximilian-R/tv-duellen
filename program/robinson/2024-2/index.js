@@ -18,7 +18,7 @@ game.contestant("Monireh");
 game.contestant("Emmeli");
 game.contestant("Nabaz");
 game.contestant("Oliver");
-game.contestant("Thomas");
+game.contestant("Thomas").eliminate();
 game.contestant("Elsa");
 game.contestant("Ramia");
 

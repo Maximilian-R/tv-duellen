@@ -26,7 +26,7 @@ game.contestant("Ali");
 game.contestant("Tommy");
 game.contestant("Ida");
 game.contestant("Ludvig");
-game.contestant("Lena");
+game.contestant("Lena").eliminate();
 game.contestant("Amanda B");
 game.contestant("Chris").eliminate();
 

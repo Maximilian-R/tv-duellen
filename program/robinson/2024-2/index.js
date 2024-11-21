@@ -22,7 +22,7 @@ game.contestant("Thomas").eliminate();
 game.contestant("Elsa");
 game.contestant("Ramia");
 
-game.contestant("Ali").bet("MR", false);
+game.contestant("Ali");
 game.contestant("Tommy");
 game.contestant("Ida").bet("JR");
 game.contestant("Ludvig").eliminate();
@@ -30,7 +30,7 @@ game.contestant("Lena").eliminate();
 game.contestant("Amanda B").bet("AR");
 game.contestant("Chris").eliminate();
 
-game.contestant("Tove");
+game.contestant("Tove").bet("MR", false);
 game.contestant("Patrik");
 
 export { game };

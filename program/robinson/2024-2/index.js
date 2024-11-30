@@ -14,13 +14,13 @@ game.contestant("Roger").eliminate();
 game.contestant("Viktor").bet("MR").bet("OR", false);
 game.contestant("Gertrud");
 
-game.contestant("Monireh");
-game.contestant("Emmeli").bet("RS", false);
+game.contestant("Monireh").eliminate();
+game.contestant("Emmeli").bet("RS", false).eliminate();
 game.contestant("Nabaz");
 game.contestant("Oliver").bet("JR", false).bet("OR");
 game.contestant("Thomas").eliminate();
-game.contestant("Elsa");
-game.contestant("Ramia");
+game.contestant("Elsa").eliminate();
+game.contestant("Ramia").eliminate();
 
 game.contestant("Ali");
 game.contestant("Tommy");

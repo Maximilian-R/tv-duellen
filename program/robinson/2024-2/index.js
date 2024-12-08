@@ -9,10 +9,10 @@ const game = new Game(
 game.contestant("Maxim").bet("AR", false);
 game.contestant("Amanda R").eliminate();
 game.contestant("Natalie");
-game.contestant("Alva").bet("RS");
+game.contestant("Alva").bet("RS").eliminate();
 game.contestant("Roger").eliminate();
 game.contestant("Viktor").bet("MR").bet("OR", false);
-game.contestant("Gertrud");
+game.contestant("Gertrud").eliminate();
 
 game.contestant("Monireh").eliminate();
 game.contestant("Emmeli").bet("RS", false).eliminate();
@@ -23,7 +23,7 @@ game.contestant("Elsa").eliminate();
 game.contestant("Ramia").eliminate();
 
 game.contestant("Ali");
-game.contestant("Tommy");
+game.contestant("Tommy").eliminate();
 game.contestant("Ida").bet("JR");
 game.contestant("Ludvig").eliminate();
 game.contestant("Lena").eliminate();

@@ -7,13 +7,13 @@ const game = new Game(
 );
 game.contestant("Benjamin").eliminate();
 game.contestant("Ella").bet("LR").eliminate();
-game.contestant("Joel");
+game.contestant("Joel").eliminate();
 game.contestant("Leo").bet("AR").eliminate();
 game.contestant("Leon").eliminate();
 game.contestant("Lucas").bet("JR").eliminate();
 game.contestant("Lukas").bet("FL").eliminate();
 game.contestant("Margaux");
-game.contestant("Minou").bet("MR");
+game.contestant("Minou").bet("MR").eliminate();
 game.contestant("Olivia").bet("SB").eliminate();
 game.contestant("Paulina").bet("RS").eliminate();
 game.contestant("Robin H").eliminate();

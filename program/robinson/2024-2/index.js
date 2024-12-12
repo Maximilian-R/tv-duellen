@@ -11,7 +11,7 @@ game.contestant("Amanda R").eliminate();
 game.contestant("Natalie");
 game.contestant("Alva").bet("RS").eliminate();
 game.contestant("Roger").eliminate();
-game.contestant("Viktor").bet("MR").bet("OR", false);
+game.contestant("Viktor").bet("MR").bet("OR", false).eliminate();
 game.contestant("Gertrud").eliminate();
 
 game.contestant("Monireh").eliminate();
@@ -22,7 +22,7 @@ game.contestant("Thomas").eliminate();
 game.contestant("Elsa").eliminate();
 game.contestant("Ramia").eliminate();
 
-game.contestant("Ali");
+game.contestant("Ali").eliminate();
 game.contestant("Tommy").eliminate();
 game.contestant("Ida").bet("JR");
 game.contestant("Ludvig").eliminate();
@@ -30,7 +30,7 @@ game.contestant("Lena").eliminate();
 game.contestant("Amanda B").bet("AR");
 game.contestant("Chris").eliminate();
 
-game.contestant("Tove").bet("MR", false);
+game.contestant("Tove").bet("MR", false).eliminate();
 game.contestant("Patrik");
 
 export { game };

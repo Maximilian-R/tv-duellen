@@ -3,6 +3,8 @@
   background: #00000059;
   padding: 1rem;
   border-radius: 0.5rem;
+
+  backdrop-filter: blur(6px);
 }
 
 .leaderboard {

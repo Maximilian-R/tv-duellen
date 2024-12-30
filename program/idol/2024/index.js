@@ -12,7 +12,7 @@ game.contestant("Leo").bet("AR").eliminate();
 game.contestant("Leon").eliminate();
 game.contestant("Lucas").bet("JR").eliminate();
 game.contestant("Lukas").bet("FL").eliminate();
-game.contestant("Margaux");
+game.contestant("Margaux").win();
 game.contestant("Minou").bet("MR").eliminate();
 game.contestant("Olivia").bet("SB").eliminate();
 game.contestant("Paulina").bet("RS").eliminate();

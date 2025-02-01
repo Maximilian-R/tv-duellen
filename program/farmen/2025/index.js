@@ -5,11 +5,11 @@ const game = new Game(
   ["farmen"],
   ["🥕", "🌽", "🥔"]
 );
-game.contestant("Jonna");
+game.contestant("Jonna").quit();
 game.contestant("Sofia");
 game.contestant("Alida");
 game.contestant("Jesper");
-game.contestant("Peter");
+game.contestant("Peter").quit();
 game.contestant("Hanna");
 game.contestant("Andreas");
 game.contestant("Marica");
@@ -19,7 +19,7 @@ game.contestant("Robert");
 game.contestant("Jessica");
 game.contestant("Mikael");
 game.contestant("Niklas");
-game.contestant("Graham");
+game.contestant("Graham").quit();
 game.contestant("Nathalie");
 
 export { game };

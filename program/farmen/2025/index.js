@@ -16,10 +16,10 @@ game.contestant("Marica");
 game.contestant("Amanda");
 game.contestant("Adam");
 game.contestant("Robert");
-game.contestant("Jessica");
+game.contestant("Jessica").eliminate();
 game.contestant("Mikael");
 game.contestant("Niklas");
 game.contestant("Graham").quit();
-game.contestant("Nathalie");
+game.contestant("Nathalie").quit();
 
 export { game };

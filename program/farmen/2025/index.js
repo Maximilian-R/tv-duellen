@@ -10,7 +10,7 @@ game.contestant("Sofia");
 game.contestant("Alida");
 game.contestant("Jesper");
 game.contestant("Peter").quit();
-game.contestant("Hanna");
+game.contestant("Hanna").eliminate();
 game.contestant("Andreas");
 game.contestant("Marica");
 game.contestant("Amanda");

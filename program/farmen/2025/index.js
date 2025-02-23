@@ -13,7 +13,7 @@ game.contestant("Peter").quit();
 game.contestant("Hanna").eliminate();
 game.contestant("Andreas");
 game.contestant("Marica");
-game.contestant("Amanda");
+game.contestant("Amanda").eliminate();
 game.contestant("Adam");
 game.contestant("Robert");
 game.contestant("Jessica").eliminate();

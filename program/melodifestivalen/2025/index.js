@@ -10,17 +10,24 @@ const game = new Game(
   ["melodifestivalen", "rounded", "theme-white"],
   ["🪩", "🎈", "🎤"]
 );
-game.contestant("Annika Wickihalder");
+game.contestant("Annika Wickihalder").bet("RS").bet("EMS");
 game.contestant("Dolly Style");
-game.contestant("Erik Segerstedt");
-game.contestant("Greczula");
+game.contestant("Erik Segerstedt").bet("OR", false);
+game.contestant("Greczula").bet("MR").bet("OR").bet("AR").bet("AMS", false);
 game.contestant("John Lundvik");
-game.contestant("Kaj");
-game.contestant("Klara Hammarström");
+game
+  .contestant("Kaj")
+  .bet("RS", false)
+  .bet("AR", false)
+  .bet("JR", false)
+  .bet("FL", false)
+  .bet("AMS")
+  .bet("ER");
+game.contestant("Klara Hammarström").bet("ER", false);
 game.contestant("Maja Ivarsson");
-game.contestant("Meira Omar");
-game.contestant("Måns Zelmerlöw");
+game.contestant("Meira Omar").bet("JR");
+game.contestant("Måns Zelmerlöw").bet("FL").bet("EMS", false);
 game.contestant("Saga Ludvigsson");
-game.contestant("Scarlet");
+game.contestant("Scarlet").bet("MR", false);
 
 export { game };

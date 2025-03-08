@@ -59,6 +59,7 @@ export class Game {
       .sort((a, b) => b.secondaryVotes - a.secondaryVotes)
       .sort((a, b) => b.primaryVotes - a.primaryVotes)
       .sort((a, b) => states[a.state] - states[b.state])
+      .sort((a, b) => a.position - b.position)
       .sort(
         (a, b) =>
           (a.state === "winner" ? 0 : 1) - (b.state === "winner" ? 0 : 1)
@@ -92,6 +93,7 @@ class Contestant {
   }
 
   win() {
+    // this.position = 1;
     this.state = "winner";
     return this;
   }

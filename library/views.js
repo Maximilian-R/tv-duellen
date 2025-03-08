@@ -71,8 +71,33 @@ export function createContestant({ img, name, votes, state, position }) {
 }
 
 export function createVotes(votes) {
+  let renderVotes = [...votes];
+  const hasPrimary = votes.some((vote) => vote.primary);
+  const hasSeveralSecondary = votes.filter((vote) => !vote.primary).length > 1;
+
+  if (hasPrimary && hasSeveralSecondary) {
+    renderVotes = votes.filter((vote) => vote.primary);
+  }
+
+  if (renderVotes.length > 4) {
+    renderVotes = renderVotes.slice(0, 3);
+  }
+
+  const hiddenVotes =
+    renderVotes.length < votes.length
+      ? html`
+          <div
+            class="vote collapse"
+            style="--animation-order: ${3};"
+            data-primary=${false}
+          >
+            +${votes.length - renderVotes.length}
+          </div>
+        `
+      : nothing;
+
   return html` <div class="votes animate">
-    ${votes.map(
+    ${renderVotes.map(
       ({ name, primary }, index) =>
         html`<div
           class="vote"
@@ -83,5 +108,6 @@ export function createVotes(votes) {
           ${name}
         </div>`
     )}
+    ${hiddenVotes}
   </div>`;
 }

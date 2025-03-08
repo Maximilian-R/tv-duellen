@@ -83,7 +83,8 @@
     width: 100%;
   }
 
-  a {
+  a,
+  button {
     text-align: center;
     display: inline-block;
     border: none;
@@ -98,11 +99,13 @@
     transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   }
 
-  a:focus-visible {
+  a:focus-visible,
+  button:focus-visible {
     outline: var(--text-color) dashed 3px;
   }
 
-  a:hover {
+  a:hover,
+  button:hover {
     box-shadow: 0px 6px 6px #00000061;
     transform: translate(0px, -6px);
   }
@@ -114,4 +117,32 @@
     align-items: center;
     position: relative;
   }
+}
+
+dialog {
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  outline: none;
+  border: none;
+}
+
+dialog h1 {
+  font-size: 2rem;
+}
+
+dialog button {
+  display: block;
+  margin-left: auto;
+}
+
+dialog .votes {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+dialog::backdrop {
+  background: #00000070;
+  backdrop-filter: blur(6px);
 }

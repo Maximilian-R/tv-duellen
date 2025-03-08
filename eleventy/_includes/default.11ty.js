@@ -10,6 +10,7 @@ export default async ({ title, themes, content }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../../../styles/styles.css" />
         <script src="../../../library/animation.js" type="module"></script>
+        <script src="../../../library/dialog.js" type="module"></script>
         <title>${title}</title>
       </head>
       <body class="${themes?.join(" ")}">

@@ -61,26 +61,36 @@ export function createMain({ contestants, emojis }) {
 }
 
 export function createContestant({ img, name, votes, state, position }) {
-  return html`<li>
+  return html`<li class="contestant">
     <picture state=${state ?? nothing} position=${position ?? nothing}
       ><img src="./images/${img}"
     /></picture>
     <span>${name}</span>
-    ${createVotes(votes)}
+    ${createVotes(votes)} ${createDialog({ name, votes })}
   </li>`;
 }
 
-export function createVotes(votes) {
+export function createDialog({ name, votes }) {
+  return html` <dialog>
+    <button>Stäng</button>
+    <h1>${name}</h1>
+    ${createVotes(votes, true, false)}
+  </dialog>`;
+}
+
+export function createVotes(votes, showAll = false, animate = true) {
   let renderVotes = [...votes];
   const hasPrimary = votes.some((vote) => vote.primary);
   const hasSeveralSecondary = votes.filter((vote) => !vote.primary).length > 1;
 
-  if (hasPrimary && hasSeveralSecondary) {
-    renderVotes = votes.filter((vote) => vote.primary);
-  }
+  if (!showAll) {
+    if (hasPrimary && hasSeveralSecondary) {
+      renderVotes = votes.filter((vote) => vote.primary);
+    }
 
-  if (renderVotes.length > 4) {
-    renderVotes = renderVotes.slice(0, 3);
+    if (renderVotes.length > 4) {
+      renderVotes = renderVotes.slice(0, 3);
+    }
   }
 
   const hiddenVotes =
@@ -96,7 +106,7 @@ export function createVotes(votes) {
         `
       : nothing;
 
-  return html` <div class="votes animate">
+  return html` <div class="votes ${animate ? "animate" : ""}">
     ${renderVotes.map(
       ({ name, primary }, index) =>
         html`<div

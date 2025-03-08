@@ -10,17 +10,18 @@ const game = new Game(
   ["melodifestivalen", "rounded", "theme-white"],
   ["🪩", "🎈", "🎤"]
 );
-game.contestant("Annika Wickihalder").bet("RS").bet("EMS");
-game.contestant("Dolly Style");
-game.contestant("Erik Segerstedt").bet("OR", false);
+game.contestant("Annika Wickihalder").bet("RS").bet("EMS").eliminate();
+game.contestant("Dolly Style").eliminate();
+game.contestant("Erik Segerstedt").bet("OR", false).eliminate();
 game
   .contestant("Greczula")
   .bet("MR")
   .bet("OR")
   .bet("AR")
   .bet("LR")
-  .bet("AMS", false);
-game.contestant("John Lundvik");
+  .bet("AMS", false)
+  .eliminate();
+game.contestant("John Lundvik").eliminate();
 game
   .contestant("Kaj")
   .bet("RS", false)
@@ -28,12 +29,13 @@ game
   .bet("JR", false)
   .bet("FL", false)
   .bet("AMS")
-  .bet("ER");
-game.contestant("Klara Hammarström").bet("ER", false);
-game.contestant("Maja Ivarsson");
-game.contestant("Meira Omar").bet("JR");
-game.contestant("Måns Zelmerlöw").bet("FL").bet("EMS", false);
-game.contestant("Saga Ludvigsson");
-game.contestant("Scarlet").bet("MR", false);
+  .bet("ER")
+  .win();
+game.contestant("Klara Hammarström").bet("ER", false).eliminate();
+game.contestant("Maja Ivarsson").eliminate();
+game.contestant("Meira Omar").bet("JR").eliminate();
+game.contestant("Måns Zelmerlöw").bet("FL").bet("EMS", false).eliminate();
+game.contestant("Saga Ludvigsson").eliminate();
+game.contestant("Scarlet").bet("MR", false).eliminate();
 
 export { game };

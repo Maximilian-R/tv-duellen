@@ -13,7 +13,13 @@ const game = new Game(
 game.contestant("Annika Wickihalder").bet("RS").bet("EMS");
 game.contestant("Dolly Style");
 game.contestant("Erik Segerstedt").bet("OR", false);
-game.contestant("Greczula").bet("MR").bet("OR").bet("AR").bet("AMS", false);
+game
+  .contestant("Greczula")
+  .bet("MR")
+  .bet("OR")
+  .bet("AR")
+  .bet("LR")
+  .bet("AMS", false);
 game.contestant("John Lundvik");
 game
   .contestant("Kaj")

@@ -78,13 +78,13 @@
 }
 
 .vote {
-  --color-h: calc(360 / 8);
+  --color-h: calc(360 / 11);
   --color-s: 80%;
   --color-l: 55%;
   /* background-color: hsl(
     calc(var(--color-h) * var(--index)) var(--color-s) var(--color-l)
-  );
-  background: radial-gradient(
+  ) !important; */
+  /* background: radial-gradient(
     at right top,
     hsl(calc(var(--color-h) * var(--index) - 20) var(--color-s) var(--color-l)),
     hsl(calc(var(--color-h) * var(--index) + 20) var(--color-s) var(--color-l))
@@ -138,11 +138,11 @@
 }
 
 .vote[data-name="AMS"] {
-  background-color: rgb(218, 200, 44);
+  background-color: rgb(242, 110, 52);
   --index: 9;
 }
 
 .vote[data-name="EMS"] {
-  background-color: rgb(199, 82, 195);
+  background-color: rgb(160, 174, 242);
   --index: 10;
 }

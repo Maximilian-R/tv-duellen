@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap");
 @import "./votes.css";
 @import "./picture.css";
+@import "./dialog.css";
 @import "./emojis.css";
 
 @import "./themes/white.css" layer(theme);
@@ -117,32 +118,4 @@
     align-items: center;
     position: relative;
   }
-}
-
-dialog {
-  z-index: 100;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  color: var(--text-color);
-  outline: none;
-  border: none;
-}
-
-dialog h1 {
-  font-size: 2rem;
-}
-
-dialog button {
-  display: block;
-  margin-left: auto;
-}
-
-dialog .votes {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-dialog::backdrop {
-  background: #00000070;
-  backdrop-filter: blur(6px);
 }

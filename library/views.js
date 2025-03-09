@@ -61,7 +61,7 @@ export function createMain({ contestants, emojis }) {
 }
 
 export function createContestant({ img, name, votes, state, position }) {
-  return html`<li class="contestant">
+  return html`<li data-dialog-trigger>
     <picture state=${state ?? nothing} position=${position ?? nothing}
       ><img src="./images/${img}"
     /></picture>
@@ -72,7 +72,9 @@ export function createContestant({ img, name, votes, state, position }) {
 
 export function createDialog({ name, votes }) {
   return html` <dialog>
-    <button>Stäng</button>
+    <form method="dialog">
+      <button type="submit">Stäng</button>
+    </form>
     <h1>${name}</h1>
     ${createVotes(votes, true, false)}
   </dialog>`;

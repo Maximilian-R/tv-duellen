@@ -1,0 +1,28 @@
+dialog {
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  outline: none;
+  border: none;
+}
+
+dialog h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+dialog button {
+  display: block;
+  margin-left: auto;
+}
+
+dialog .votes {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+dialog::backdrop {
+  background: #00000070;
+  backdrop-filter: blur(6px);
+}

@@ -1,16 +1,9 @@
 function setupClickListeners() {
-  const contestants = document.querySelectorAll(".contestant");
-  Array.from(contestants).forEach((contestant) => {
-    const dialog = contestant.querySelector("dialog");
-    contestant.addEventListener("click", () => {
+  const triggers = document.querySelectorAll("[data-dialog-trigger]");
+  Array.from(triggers).forEach((trigger) => {
+    const dialog = trigger.querySelector("dialog");
+    trigger.addEventListener("click", () => {
       dialog.showModal();
-    });
-
-    const close = dialog.querySelector("button");
-    close.addEventListener("click", () => {
-      setTimeout(() => {
-        dialog.close();
-      }, 0);
     });
   });
 }

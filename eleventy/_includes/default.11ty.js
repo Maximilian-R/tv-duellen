@@ -13,7 +13,7 @@ export default async ({ title, themes, content }) => {
         <script src="../../../library/dialog.js" type="module"></script>
         <title>${title}</title>
       </head>
-      <body class="${themes?.join(" ")}">
+      <body class="background ${themes?.join(" ")}">
         ${content}
       </body>
     </html>`;

@@ -44,23 +44,23 @@ picture[state]::after {
   background-color: #00000088;
 }
 
-picture[state="eliminated"]::after {
+picture[state="ELIMINATED"]::after {
   content: "❌";
 }
 
-picture[state="quitter"]::after {
+picture[position]::after {
+  content: attr(position);
+}
+
+picture[state="QUIT"]::after {
   content: "Avhopp";
   color: white;
   font-size: 1rem;
 }
 
-picture[state="winner"]::after {
+picture[state="WINNER"]::after {
   content: "🏆";
   background: none;
-}
-
-picture[position]::after {
-  content: attr(position);
 }
 
 picture ~ span {

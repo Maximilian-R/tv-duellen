@@ -1,8 +1,14 @@
-const states = {
-  winner: -1,
-  null: 0,
-  eliminated: 1,
-  quitter: 2,
+const PLAYER_STATE = {
+  WINNER: -1,
+  PLAYING: 0,
+  ELIMINATED: 1,
+  QUIT: 2,
+};
+
+export const getPlayerStateLabel = (state) => {
+  return Object.entries(PLAYER_STATE).find(
+    ([key, value]) => value === state
+  )?.[0];
 };
 
 export class Leaderboard {
@@ -23,7 +29,7 @@ export class Leaderboard {
 
     this.games.forEach((game) => {
       const winner = game.contestants.find(
-        (contestant) => contestant.state === "winner"
+        (contestant) => contestant.state === PLAYER_STATE.WINNER
       );
       const hasPrimary = winner?.votes.some((vote) => vote.primary);
       winner?.votes
@@ -58,12 +64,8 @@ export class Game {
       .sort((a, b) => a.name.localeCompare(b.name))
       .sort((a, b) => b.secondaryVotes - a.secondaryVotes)
       .sort((a, b) => b.primaryVotes - a.primaryVotes)
-      .sort((a, b) => states[a.state] - states[b.state])
-      .sort((a, b) => a.position - b.position)
-      .sort(
-        (a, b) =>
-          (a.state === "winner" ? 0 : 1) - (b.state === "winner" ? 0 : 1)
-      );
+      .sort((a, b) => a.state - b.state)
+      .sort((a, b) => a.position - b.position);
   }
 }
 
@@ -71,8 +73,8 @@ class Contestant {
   constructor(name, img) {
     this.name = name;
     this.img = img;
-    this.state = null;
     this.position;
+    this.state = PLAYER_STATE.PLAYING;
     this._votes = [];
   }
 
@@ -82,19 +84,19 @@ class Contestant {
   }
 
   quit() {
-    this.state = "quitter";
+    this.state = PLAYER_STATE.QUIT;
     return this;
   }
 
   eliminate(position) {
-    this.state = "eliminated";
+    this.state = PLAYER_STATE.ELIMINATED;
     this.position = position;
     return this;
   }
 
   win() {
-    // this.position = 1;
-    this.state = "winner";
+    this.state = PLAYER_STATE.WINNER;
+    this.position = 1;
     return this;
   }
 

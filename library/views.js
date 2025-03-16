@@ -2,6 +2,7 @@ import { nothing } from "lit";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { collectResultSync } from "@lit-labs/ssr/lib/render-result.js";
 import { render as litRender, html } from "@lit-labs/ssr";
+import { getPlayerStateLabel } from "./game.js";
 
 export function renderToString(content) {
   const output = litRender(content);
@@ -62,7 +63,9 @@ export function createMain({ contestants, emojis }) {
 
 export function createContestant({ img, name, votes, state, position }) {
   return html`<li data-dialog-trigger>
-    <picture state=${state ?? nothing} position=${position ?? nothing}
+    <picture
+      state=${getPlayerStateLabel(state) ?? nothing}
+      position=${position ?? nothing}
       ><img src="./images/${img}"
     /></picture>
     <span>${name}</span>

@@ -146,3 +146,8 @@
   background-color: rgb(160, 174, 242);
   --index: 10;
 }
+
+.vote[data-name="ARL"] {
+  background-color: rgb(146, 199, 96);
+  --index: 11;
+}

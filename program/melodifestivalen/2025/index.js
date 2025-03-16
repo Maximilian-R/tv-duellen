@@ -30,6 +30,7 @@ game
   .bet("FL", false)
   .bet("AMS")
   .bet("ER")
+  .bet("ARL")
   .win();
 game.contestant("Klara Hammarström").bet("ER", false).eliminate(4);
 game.contestant("Maja Ivarsson").eliminate(11);

@@ -6,12 +6,12 @@ const game = new Game(
   ["🥕", "🌽", "🥔"]
 );
 game.contestant("Jonna").quit();
-game.contestant("Sofia").bet("AR", false).bet("OR");
+game.contestant("Sofia").bet("AR", false).bet("OR").eliminate();
 game.contestant("Alida").bet("OR", false).eliminate();
 game.contestant("Jesper").bet("MR", false);
 game.contestant("Peter").quit();
 game.contestant("Hanna").eliminate();
-game.contestant("Andreas");
+game.contestant("Andreas").eliminate();
 game.contestant("Marica").bet("JR").bet("RS");
 game.contestant("Amanda");
 game.contestant("Adam").bet("MR");

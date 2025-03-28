@@ -12,7 +12,7 @@ game.contestant("Jesper").bet("MR", false);
 game.contestant("Peter").quit();
 game.contestant("Hanna").eliminate();
 game.contestant("Andreas").eliminate();
-game.contestant("Marica").bet("JR").bet("RS");
+game.contestant("Marica").bet("JR").bet("RS").eliminate();
 game.contestant("Amanda");
 game.contestant("Adam").bet("MR");
 game.contestant("Robert").bet("RS", false).quit();

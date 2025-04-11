@@ -8,8 +8,8 @@ const game = new Game(
 
 game.contestant("Clara");
 game.contestant("Josefine");
-game.contestant("Andreas E");
-game.contestant("Anna");
+game.contestant("Andreas E").quit();
+game.contestant("Anna").quit();
 game.contestant("Simon H");
 game.contestant("Simon S");
 game.contestant("Zuzana");
@@ -19,11 +19,11 @@ game.contestant("Aron");
 
 game.contestant("Andrea");
 game.contestant("Christoffer");
-game.contestant("Leith");
+game.contestant("Leith").quit();
 game.contestant("Toni");
 game.contestant("David");
 game.contestant("Juliette");
-game.contestant("Madeleine");
+game.contestant("Madeleine").eliminate();
 game.contestant("Amanda Å");
 game.contestant("Andreas L");
 game.contestant("Sewit");

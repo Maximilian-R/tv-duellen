@@ -6,7 +6,7 @@ const game = new Game(
   ["🌴", "🥥", "🔥"]
 );
 
-game.contestant("Clara");
+game.contestant("Clara").quit();
 game.contestant("Josefine");
 game.contestant("Andreas E").quit();
 game.contestant("Anna").quit();
@@ -29,7 +29,9 @@ game.contestant("Andreas L");
 game.contestant("Sewit");
 
 game.contestant("Sara");
-game.contestant("Amanda E");
-game.contestant("Pascal");
+game.contestant("Amanda E").eliminate();
+game.contestant("Pascal").quit();
+game.contestant("Pål");
+game.contestant("Fabian");
 
 export { game };

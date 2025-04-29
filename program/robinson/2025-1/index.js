@@ -7,24 +7,24 @@ const game = new Game(
 );
 
 game.contestant("Clara").quit();
-game.contestant("Josefine");
+game.contestant("Josefine").eliminate();
 game.contestant("Andreas E").quit();
 game.contestant("Anna").quit();
 game.contestant("Simon H");
 game.contestant("Simon S");
 game.contestant("Zuzana");
-game.contestant("Angelica");
+game.contestant("Angelica").quit();
 game.contestant("Kais");
 game.contestant("Aron");
 
 game.contestant("Andrea");
 game.contestant("Christoffer");
 game.contestant("Leith").quit();
-game.contestant("Toni");
+game.contestant("Toni").eliminate();
 game.contestant("David");
 game.contestant("Juliette");
 game.contestant("Madeleine").eliminate();
-game.contestant("Amanda Å");
+game.contestant("Amanda Å").quit();
 game.contestant("Andreas L");
 game.contestant("Sewit");
 
@@ -33,5 +33,6 @@ game.contestant("Amanda E").eliminate();
 game.contestant("Pascal").quit();
 game.contestant("Pål");
 game.contestant("Fabian");
+game.contestant("Sophie");
 
 export { game };

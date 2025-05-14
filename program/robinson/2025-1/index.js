@@ -33,6 +33,7 @@ game.contestant("Amanda E").eliminate();
 game.contestant("Pascal").quit();
 game.contestant("Pål").bet("AR", false).bet("RS", false).bet("MR");
 game.contestant("Fabian").quit();
-game.contestant("Sophie").bet("AR").bet("JR");
+game.contestant("Sophie").bet("AR").bet("JR").bet("OR");
+game.contestant("Pontus").bet("OR", false);
 
 export { game };

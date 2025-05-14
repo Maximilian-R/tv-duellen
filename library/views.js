@@ -88,14 +88,19 @@ export function createVotes(votes, showAll = false, animate = true) {
   let renderVotes = [...votes];
   const hasPrimary = votes.some((vote) => vote.primary);
   const hasSeveralSecondary = votes.filter((vote) => !vote.primary).length > 1;
+  const maxRenderVotes = 4;
 
   if (!showAll) {
-    if (hasPrimary && hasSeveralSecondary) {
+    if (
+      hasPrimary &&
+      hasSeveralSecondary &&
+      renderVotes.length > maxRenderVotes
+    ) {
       renderVotes = votes.filter((vote) => vote.primary);
     }
 
-    if (renderVotes.length > 4) {
-      renderVotes = renderVotes.slice(0, 3);
+    if (renderVotes.length > maxRenderVotes) {
+      renderVotes = renderVotes.slice(0, maxRenderVotes - 1);
     }
   }
 
@@ -104,7 +109,7 @@ export function createVotes(votes, showAll = false, animate = true) {
       ? html`
           <div
             class="vote collapse"
-            style="--animation-order: ${3};"
+            style="--animation-order: ${renderVotes.length};"
             data-primary=${false}
           >
             +${votes.length - renderVotes.length}

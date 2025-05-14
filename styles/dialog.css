@@ -10,6 +10,8 @@ dialog {
 dialog h1 {
   font-size: 2rem;
   font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 dialog button {
@@ -25,4 +27,14 @@ dialog .votes {
 dialog::backdrop {
   background: #00000070;
   backdrop-filter: blur(6px);
+}
+
+dialog picture ~ .votes {
+  position: static;
+}
+
+dialog picture {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
 }

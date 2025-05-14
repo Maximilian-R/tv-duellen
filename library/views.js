@@ -69,15 +69,16 @@ export function createContestant({ img, name, votes, state, position }) {
       ><img src="./images/${img}"
     /></picture>
     <span>${name}</span>
-    ${createVotes(votes)} ${createDialog({ name, votes })}
+    ${createVotes(votes)} ${createDialog({ name, votes, img })}
   </li>`;
 }
 
-export function createDialog({ name, votes }) {
+export function createDialog({ name, votes, img }) {
   return html` <dialog>
     <form method="dialog">
       <button type="submit">Stäng</button>
     </form>
+    <picture><img src="./images/${img}" /></picture>
     <h1>${name}</h1>
     ${createVotes(votes, true, false)}
   </dialog>`;

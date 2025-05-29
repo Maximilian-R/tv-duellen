@@ -11,22 +11,22 @@ game.contestant("Josefine").eliminate();
 game.contestant("Andreas E").quit();
 game.contestant("Anna").quit();
 game.contestant("Simon H");
-game.contestant("Simon S");
+game.contestant("Simon S").eliminate();
 game.contestant("Zuzana").eliminate();
 game.contestant("Angelica").quit();
 game.contestant("Kais");
 game.contestant("Aron").bet("MR", false);
 
-game.contestant("Andrea");
+game.contestant("Andrea").eliminate();
 game.contestant("Christoffer").bet("JR", false);
 game.contestant("Leith").quit();
 game.contestant("Toni").eliminate();
-game.contestant("David").bet("RS");
+game.contestant("David").bet("RS").eliminate();
 game.contestant("Juliette");
 game.contestant("Madeleine").eliminate();
 game.contestant("Amanda Å").quit();
-game.contestant("Andreas L");
-game.contestant("Sewit");
+game.contestant("Andreas L").quit();
+game.contestant("Sewit").eliminate();
 
 game.contestant("Sara");
 game.contestant("Amanda E").eliminate();

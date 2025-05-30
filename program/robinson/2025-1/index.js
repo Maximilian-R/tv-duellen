@@ -18,7 +18,7 @@ game.contestant("Kais");
 game.contestant("Aron").bet("MR", false);
 
 game.contestant("Andrea").eliminate();
-game.contestant("Christoffer").bet("JR", false);
+game.contestant("Christoffer").bet("JR", false).eliminate();
 game.contestant("Leith").quit();
 game.contestant("Toni").eliminate();
 game.contestant("David").bet("RS").eliminate();
@@ -31,7 +31,7 @@ game.contestant("Sewit").eliminate();
 game.contestant("Sara");
 game.contestant("Amanda E").eliminate();
 game.contestant("Pascal").quit();
-game.contestant("Pål").bet("AR", false).bet("RS", false).bet("MR");
+game.contestant("Pål").bet("AR", false).bet("RS", false).bet("MR").eliminate();
 game.contestant("Fabian").quit();
 game.contestant("Sophie").bet("AR").bet("JR").bet("OR");
 game.contestant("Pontus").bet("OR", false);

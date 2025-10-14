@@ -28,4 +28,7 @@ game.contestant("Samuel");
 game.contestant("Susanne");
 game.contestant("Ulf");
 
+game.contestant("Lea");
+game.contestant("Per");
+
 export { game };

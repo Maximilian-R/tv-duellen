@@ -132,7 +132,7 @@
   --index: 7;
 }
 
-.vote[data-name="SB"] {
+.vote[data-name="GUEST"] {
   background-color: rgb(240, 126, 126);
   --index: 8;
 }

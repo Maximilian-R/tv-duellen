@@ -14,7 +14,7 @@ game.contestant("Lucas").bet("JR").eliminate();
 game.contestant("Lukas").bet("FL").eliminate();
 game.contestant("Margaux").win();
 game.contestant("Minou").bet("MR").eliminate();
-game.contestant("Olivia").bet("SB").eliminate();
+game.contestant("Olivia").eliminate(); //.bet("GUEST")
 game.contestant("Paulina").bet("RS").eliminate();
 game.contestant("Robin H").eliminate();
 game.contestant("Robin S").bet("OR").bet("ER").eliminate();

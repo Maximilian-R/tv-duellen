@@ -11,14 +11,34 @@
   margin: 1rem 0;
   --vote-size: 3rem;
 
-  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.leaderboard-container h2 {
+  text-align: center;
 }
 
 .leaderboard > li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.leaderboard > li .vote {
+  flex-shrink: 0;
+}
+
+.leaderboard .stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  background-color: #202222;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #00000096;
 }
 
 .votes {

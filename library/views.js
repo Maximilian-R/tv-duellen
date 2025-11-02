@@ -11,14 +11,21 @@ export function renderToString(content) {
 
 export function createLeaderboard(leaderboard) {
   leaderboard = leaderboard.get();
+
+  // <div class="rank">${index + 1}</div>
   return html`<div class="leaderboard-container">
     <h2>Leaderboard</h2>
     <ol class="leaderboard">
       ${leaderboard.map(
-        ([key, value]) =>
+        ([key, value], index) =>
           html`<li>
             <div data-name="${key}" class="vote">${key}</div>
-            ${[...Array(value).keys()].map((v) => "🏆")}
+            <div class="stats">
+              <div class="trophies">
+                ${[...Array(value.trophies).keys()].map((v) => "🏆")}
+              </div>
+              <div class="points">${value.points}</div>
+            </div>
           </li>`
       )}
     </ol>

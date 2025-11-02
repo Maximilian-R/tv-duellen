@@ -14,6 +14,7 @@ export const getPlayerStateLabel = (state) => {
 export class Leaderboard {
   constructor(games) {
     this.games = games;
+    this.podiumPoints = [100, 50, 25];
   }
 
   get() {
@@ -22,7 +23,19 @@ export class Leaderboard {
     this.games.forEach((game) => {
       game.contestants.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
-          leaderboard[vote.name] = 0;
+          leaderboard[vote.name] = { trophies: 0, points: 0 };
+        });
+      });
+    });
+
+    this.games.forEach((game) => {
+      const podium = game.contestants.filter(
+        (contestant) => contestant.position <= this.podiumPoints.length
+      );
+      podium.forEach((contestant) => {
+        contestant.votes.forEach((vote) => {
+          leaderboard[vote.name].points +=
+            this.podiumPoints[contestant.position - 1];
         });
       });
     });
@@ -35,10 +48,12 @@ export class Leaderboard {
       winner?.votes
         .filter((vote) => (hasPrimary ? vote.primary : true))
         .forEach((vote) => {
-          leaderboard[vote.name] = leaderboard[vote.name] + 1;
+          leaderboard[vote.name].trophies = leaderboard[vote.name].trophies + 1;
         });
     });
-    return Object.entries(leaderboard).sort(([_a, a], [_b, b]) => b - a);
+    return Object.entries(leaderboard).sort(
+      ([_a, a], [_b, b]) => b.points - a.points
+    );
   }
 }
 

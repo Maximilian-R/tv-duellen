@@ -38,6 +38,7 @@ export default {
           <link rel="stylesheet" href="./styles/styles.css" />
           <script src="./library/animation.js" type="module"></script>
           <title>TV-Duellen</title>
+          <link rel="icon" type="image/x-icon" href="/images/favicon.jpg" />
         </head>
         <body class="background default theme-white">
           <header>

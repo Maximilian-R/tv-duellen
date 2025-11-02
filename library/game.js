@@ -35,7 +35,8 @@ export class Leaderboard {
       podium.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
           leaderboard[vote.name].points +=
-            this.podiumPoints[contestant.position - 1];
+            this.podiumPoints[contestant.position - 1] *
+            (vote.primary ? 1 : 0.8);
         });
       });
     });

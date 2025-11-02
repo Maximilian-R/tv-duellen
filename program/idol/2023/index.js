@@ -3,7 +3,7 @@ import { Game } from "../../../library/game.js";
 const game = new Game(
   { name: "Idol", year: 2023 },
   ["idol", "rounded", "theme-white"],
-  ["✨", "🎙️", "🎶"]
+  ["🎙️", "✨", "🎶"]
 );
 game.contestant("Antranik").eliminate();
 game.contestant("Aus").eliminate();

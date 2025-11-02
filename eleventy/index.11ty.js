@@ -43,13 +43,16 @@ export default {
         <body class="background default theme-white">
           <header>
             <h1>TV-Duellen</h1>
-            ${createEmojis(["🎙️", "🥕", "🌴"])}
+            ${false ? createEmojis(["🎙️", "🥕", "🌴"]) : undefined}
           </header>
           <main>
             <h2>Program</h2>
             ${Object.entries(groups).map(
               ([key, value]) =>
-                html` <h3>${key}</h3>
+                html` <h3>
+                    ${key} ${createEmojis([value[0].data.game.emojis[0]], true)}
+                  </h3>
+
                   <ul>
                     ${value.map(
                       (program) => html`<li>

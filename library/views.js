@@ -43,8 +43,8 @@ export function createHeader({ meta, emojis }) {
   `;
 }
 
-export function createEmojis(emojis) {
-  return html`<div class="emojis animate">
+export function createEmojis(emojis, small = false) {
+  return html`<div class="emojis animate ${small ? "small" : undefined}">
     ${emojis.map(
       (emoji, index) =>
         html`<div style="--animation-order: ${index};">${emoji}</div>`

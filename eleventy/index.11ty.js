@@ -50,7 +50,7 @@ export default {
             ${Object.entries(groups).map(
               ([key, value]) =>
                 html` <h3>
-                    ${key} ${createEmojis([value[0].data.game.emojis[0]], true)}
+                    ${createEmojis([value[0].data.game.emojis[0]], true)} ${key}
                   </h3>
 
                   <ul>

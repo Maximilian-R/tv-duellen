@@ -45,7 +45,7 @@ picture[state]::after {
 }
 
 picture[state="ELIMINATED"]::after {
-  content: "❌";
+  content: var(--eliminate-icon);
 }
 
 picture[position]::after {
@@ -53,13 +53,13 @@ picture[position]::after {
 }
 
 picture[state="QUIT"]::after {
-  content: "Avhopp";
+  content: var(--quit-icon);
   color: white;
   font-size: 1rem;
 }
 
 picture[state="WINNER"]::after {
-  content: "🏆";
+  content: var(--winner-icon);
   background: none;
 }
 

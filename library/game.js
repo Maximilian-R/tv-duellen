@@ -65,7 +65,7 @@ export class Game {
       .sort((a, b) => b.secondaryVotes - a.secondaryVotes)
       .sort((a, b) => b.primaryVotes - a.primaryVotes)
       .sort((a, b) => a.state - b.state)
-      .sort((a, b) => a.position - b.position);
+      .sort((a, b) => (a.position ?? Infinity) - (b.position ?? Infinity));
   }
 }
 

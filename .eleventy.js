@@ -1,6 +1,7 @@
 export default function (eleventyConfig) {
   eleventyConfig.setOutputDirectory("dist");
   eleventyConfig.addPassthroughCopy("images/favicon.jpg");
+  eleventyConfig.addPassthroughCopy("images/curtain.png");
   eleventyConfig.addPassthroughCopy("styles/**/*.css");
   eleventyConfig.addPassthroughCopy("program/**/*.jpg");
   eleventyConfig.addPassthroughCopy("library/animation.js");

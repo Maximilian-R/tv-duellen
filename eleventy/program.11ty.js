@@ -12,7 +12,13 @@ export default {
       addAllPagesToCollections: true,
     },
     permalink: ({ game }) =>
-      `program/${slugify(game.meta.name)}/${game.meta.year}${
+      `program/${slugify(game.meta.name, {
+        customReplacements: [
+          ["ö", "o"],
+          ["ä", "a"],
+          ["å", "a"],
+        ],
+      })}/${game.meta.year}${
         game.meta.version ? "-" + game.meta.version : ""
       }/index.html`,
     eleventyComputed: {

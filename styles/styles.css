@@ -28,7 +28,7 @@
   }
 
   html {
-    font-size: min(2vw, 30px);
+    font-size: 24px;
   }
 
   @media screen and (max-width: 900px) {
@@ -39,7 +39,7 @@
 
   body {
     margin: 0 auto;
-    max-width: min(100vw, 1400px);
+    max-width: min(100vw, 1200px);
     min-height: 100vh;
     padding: 2rem 1rem;
     display: flex;

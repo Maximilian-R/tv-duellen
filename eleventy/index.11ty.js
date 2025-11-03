@@ -44,7 +44,8 @@ export default {
             href="../../../images/favicon.jpg"
           />
         </head>
-        <body class="background default theme-white">
+        <body class="default theme-white">
+          <div class="background"></div>
           <header>
             <h1>TV-Duellen</h1>
             ${false ? createEmojis(["🎙️", "🥕", "🌴"]) : undefined}

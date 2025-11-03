@@ -80,7 +80,7 @@ dialog {
 .förrädarna::before,
 .förrädarna dialog {
   background-color: #ffffff;
-  background-image: url("/images/curtain.png");
+  background-image: url("../../../images/curtain.png");
   background-size: auto;
   background-size: cover;
 

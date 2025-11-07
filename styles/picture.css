@@ -4,7 +4,6 @@ picture {
 
   position: relative;
   padding: calc(2 * var(--frame-size));
-  height: 100%;
 }
 
 picture img,

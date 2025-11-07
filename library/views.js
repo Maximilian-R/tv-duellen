@@ -72,8 +72,8 @@ export function createContestant({ img, name, votes, state, position }) {
   return html`<li data-dialog-trigger>
     <picture
       state=${getPlayerStateLabel(state) ?? nothing}
-      position=${position ?? nothing}
-      ><img src="./images/${img}"
+      position=${Number.isFinite(position) ? position : nothing}
+      ><img src="./images/${img}" onerror="replaceImage(this)"
     /></picture>
     <span>${name}</span>
     ${createVotes(votes)} ${createDialog({ name, votes, img })}

@@ -14,7 +14,7 @@ game.contestant("Gry");
 game.contestant("Isabella");
 game.contestant("Jan");
 game.contestant("Janina");
-game.contestant("Joel");
+game.contestant("Joel").eliminate(); // 20
 game.contestant("Johannes");
 game.contestant("Malick");
 game.contestant("Malou");

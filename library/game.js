@@ -14,7 +14,7 @@ export const getPlayerStateLabel = (state) => {
 export class Leaderboard {
   constructor(games) {
     this.games = games;
-    this.podiumPoints = [100, 50, 25];
+    this.podiumPoints = [100, 0, 0];
   }
 
   get() {
@@ -35,8 +35,7 @@ export class Leaderboard {
       podium.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
           leaderboard[vote.name].points +=
-            this.podiumPoints[contestant.position - 1] *
-            (vote.primary ? 1 : 0.8);
+            this.podiumPoints[contestant.position - 1] * (vote.primary ? 1 : 0);
         });
       });
     });

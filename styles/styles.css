@@ -125,3 +125,7 @@
     position: relative;
   }
 }
+
+[data-dialog-trigger] {
+  cursor: pointer;
+}

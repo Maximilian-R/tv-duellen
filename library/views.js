@@ -13,6 +13,7 @@ export function createLeaderboard(leaderboard) {
   leaderboard = leaderboard.get();
 
   // <div class="rank">${index + 1}</div>
+  // <div class="points">${value.points}</div>
   return html`<div class="leaderboard-container">
     <h2>Leaderboard</h2>
     <ol class="leaderboard">
@@ -24,7 +25,6 @@ export function createLeaderboard(leaderboard) {
               <div class="trophies">
                 ${[...Array(value.trophies).keys()].map((v) => "🏆")}
               </div>
-              <div class="points">${value.points}</div>
             </div>
           </li>`
       )}

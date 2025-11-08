@@ -9,7 +9,7 @@ const game = new Game(
 game.contestant("Agust");
 game.contestant("Akink");
 game.contestant("Ania");
-game.contestant("Ann-Helene");
+game.contestant("Ann-Helene").eliminate();
 game.contestant("Anna");
 game.contestant("Carin");
 game.contestant("Charlie");

@@ -22,7 +22,7 @@ game.contestant("Marcus");
 game.contestant("Matilda");
 game.contestant("Mona");
 game.contestant("Rebecka");
-game.contestant("Samuel");
+game.contestant("Samuel").eliminate(); // 19
 game.contestant("Tom");
 game.contestant("Wilmer");
 

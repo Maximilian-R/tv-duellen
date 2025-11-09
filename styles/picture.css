@@ -64,6 +64,10 @@ picture[state="ELIMINATED"]::after {
   content: var(--eliminate-icon);
 }
 
+picture[reason="MURDER"]::after {
+  content: "⚰️";
+}
+
 picture[position]::after {
   content: attr(position);
 }

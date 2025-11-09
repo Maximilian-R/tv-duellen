@@ -5,21 +5,25 @@ const game = new Game(
   ["idol", "rounded", "theme-white"],
   ["🎙️", "✨", "🎶"]
 );
-game.contestant("Allan").eliminate(11);
-game.contestant("Alma").eliminate(11);
+game.contestant("Allan");
+game.contestant("Alma");
 game.contestant("Arvid");
 game.contestant("Ingrid").bet("ER").bet("FL");
-game.contestant("Jénovic").bet("JR").eliminate(9);
+game.contestant("Jénovic").bet("JR");
 game.contestant("Jonas");
-game.contestant("Karl").bet("OR").eliminate(9);
+game.contestant("Karl").bet("OR");
 game.contestant("Love B");
 game.contestant("Love S").bet("MR");
-game.contestant("Malva").eliminate(10);
+game.contestant("Malva");
 game.contestant("Nicolina");
-game.contestant("Nora").eliminate(11);
-game.contestant("Rasmus").eliminate(11);
-game.contestant("Rebecca").eliminate(10);
+game.contestant("Nora");
+game.contestant("Rasmus");
+game.contestant("Rebecca");
 game.contestant("Sofia").bet("RS");
 game.contestant("Tuva").bet("AR");
+
+game.eliminate("Allan", "Alma", "Nora", "Rasmus");
+game.eliminate("Malva", "Rebecca");
+game.eliminate("Jénovic", "Karl");
 
 export { game };

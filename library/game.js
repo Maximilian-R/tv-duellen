@@ -58,12 +58,13 @@ export class Leaderboard {
 }
 
 export class Game {
-  constructor(meta, theme, emojis) {
+  constructor(meta, theme, emojis, displayPosition = true) {
     this.meta = meta;
     this.emojis = emojis;
     this.contestants = [];
     this.defaultImageFormat = ".jpg";
     this.theme = theme;
+    this.displayPosition = displayPosition;
   }
 
   contestant(name, role) {
@@ -72,6 +73,30 @@ export class Game {
     const contestant = new Contestant(name, img, role);
     this.contestants.push(contestant);
     return contestant;
+  }
+
+  eliminate(...names) {
+    const position =
+      this.contestants.filter(
+        (contestant) => contestant.state === PLAYER_STATE.PLAYING
+      ).length -
+      names.length +
+      1;
+
+    const eliminatedContestants = names.map((name) =>
+      this.contestants.find((c) => c.name === name)
+    );
+    eliminatedContestants.forEach((contestant) => {
+      contestant.eliminate(position);
+    });
+
+    return {
+      reason: (reason) => {
+        eliminatedContestants.forEach((contestant) => {
+          contestant.reason = reason;
+        });
+      },
+    };
   }
 
   sortContestants() {
@@ -90,6 +115,7 @@ class Contestant {
     this.img = img;
     this.role = role;
     this.position;
+    this.reason;
     this.state = PLAYER_STATE.PLAYING;
     this._votes = [];
   }
@@ -104,7 +130,8 @@ class Contestant {
     return this;
   }
 
-  eliminate(position) {
+  eliminate(position, reason) {
+    this.reason = reason;
     this.state = PLAYER_STATE.ELIMINATED;
     this.position = position ?? Infinity;
     return this;

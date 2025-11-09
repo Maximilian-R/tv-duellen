@@ -59,20 +59,28 @@ export function createEmojis(emojis, small = false) {
   </div>`;
 }
 
-export function createMain({ contestants, emojis }) {
+export function createMain({ contestants, emojis, displayPosition }) {
   return html`<main>
     <ul>
-      ${contestants.map((contestant) => createContestant(contestant))}
+      ${contestants.map((contestant) =>
+        createContestant(contestant, displayPosition)
+      )}
     </ul>
     ${createEmojis(emojis)}
   </main>`;
 }
 
-export function createContestant({ img, name, votes, state, position, role }) {
+export function createContestant(
+  { img, name, votes, state, position, role, reason },
+  displayPosition
+) {
   return html`<li data-dialog-trigger>
     <picture
       state=${getPlayerStateLabel(state) ?? nothing}
-      position=${Number.isFinite(position) ? position : nothing}
+      reason=${reason ?? nothing}
+      position=${displayPosition && Number.isFinite(position)
+        ? position
+        : nothing}
       ><img src="./images/${img}" onerror="replaceImage(this)"
     /></picture>
     <span>${name}</span>

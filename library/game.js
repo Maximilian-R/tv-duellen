@@ -66,10 +66,10 @@ export class Game {
     this.theme = theme;
   }
 
-  contestant(name) {
+  contestant(name, role) {
     const img =
       name.toLowerCase().replaceAll(" ", "-") + this.defaultImageFormat;
-    const contestant = new Contestant(name, img);
+    const contestant = new Contestant(name, img, role);
     this.contestants.push(contestant);
     return contestant;
   }
@@ -85,9 +85,10 @@ export class Game {
 }
 
 class Contestant {
-  constructor(name, img) {
+  constructor(name, img, role) {
     this.name = name;
     this.img = img;
+    this.role = role;
     this.position;
     this.state = PLAYER_STATE.PLAYING;
     this._votes = [];

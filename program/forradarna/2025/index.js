@@ -5,8 +5,11 @@ const game = new Game(
   ["förrädarna", "theme-white"],
   ["🎭", "🗡️", "🩸"]
 );
-game.contestant("Ahmed");
-game.contestant("Alexander");
+
+const traitor = "🎭";
+
+game.contestant("Ahmed", traitor);
+game.contestant("Alexander", traitor);
 game.contestant("Alexandra");
 game.contestant("Britta");
 game.contestant("Cleo");
@@ -19,7 +22,7 @@ game.contestant("Johannes");
 game.contestant("Malick");
 game.contestant("Malou");
 game.contestant("Marcus");
-game.contestant("Matilda");
+game.contestant("Matilda", traitor);
 game.contestant("Mona");
 game.contestant("Rebecka");
 game.contestant("Samuel").eliminate(); // 19

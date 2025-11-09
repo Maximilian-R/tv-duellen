@@ -68,7 +68,7 @@ export function createMain({ contestants, emojis }) {
   </main>`;
 }
 
-export function createContestant({ img, name, votes, state, position }) {
+export function createContestant({ img, name, votes, state, position, role }) {
   return html`<li data-dialog-trigger>
     <picture
       state=${getPlayerStateLabel(state) ?? nothing}
@@ -76,18 +76,21 @@ export function createContestant({ img, name, votes, state, position }) {
       ><img src="./images/${img}" onerror="replaceImage(this)"
     /></picture>
     <span>${name}</span>
-    ${createVotes(votes)} ${createDialog({ name, votes, img })}
+    ${createVotes(votes)} ${createRole(role)}
+    ${createDialog({ name, votes, img, role })}
   </li>`;
 }
 
-export function createDialog({ name, votes, img }) {
+export function createDialog({ name, votes, img, role }) {
   return html` <dialog>
     <form method="dialog">
       <button type="submit">Stäng</button>
     </form>
-    <picture><img src="./images/${img}" /></picture>
-    <h1>${name}</h1>
-    ${createVotes(votes, true, false)}
+    <div style="position: relative;">
+      <picture><img src="./images/${img}" /></picture>
+      <h1>${name}</h1>
+      ${createVotes(votes, true, false)} ${createRole(role)}
+    </div>
   </dialog>`;
 }
 
@@ -138,4 +141,10 @@ export function createVotes(votes, showAll = false, animate = true) {
     )}
     ${hiddenVotes}
   </div>`;
+}
+
+export function createRole(role) {
+  if (role) {
+    return html`<div class="role">${role}</div>`;
+  }
 }

@@ -17,6 +17,7 @@ dialog h1 {
 dialog button {
   display: block;
   margin-left: auto;
+  margin-bottom: 16px;
 }
 
 dialog .votes {

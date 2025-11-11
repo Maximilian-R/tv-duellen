@@ -19,7 +19,7 @@ game.contestant("Isabella");
 game.contestant("Jan");
 game.contestant("Janina");
 game.contestant("Joel");
-game.contestant("Johannes");
+game.contestant("Johannes", traitor);
 game.contestant("Malick");
 game.contestant("Malou");
 game.contestant("Marcus");
@@ -32,5 +32,7 @@ game.contestant("Wilmer");
 
 game.eliminate("Joel").reason("MURDER");
 game.eliminate("Samuel");
+game.eliminate("Jan").reason("MURDER");
+game.eliminate("Alexander");
 
 export { game };

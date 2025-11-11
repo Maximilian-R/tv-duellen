@@ -13,7 +13,7 @@ game.contestant("Jénovic").bet("JR");
 game.contestant("Jonas");
 game.contestant("Karl").bet("OR");
 game.contestant("Love B");
-game.contestant("Love S").bet("MR");
+game.contestant("Love S").bet("MR").bet("LR");
 game.contestant("Malva");
 game.contestant("Nicolina");
 game.contestant("Nora");

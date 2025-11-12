@@ -19,7 +19,7 @@ export default async ({ title, themes, content }) => {
         <script src="../../../library/image.js" type="module"></script>
         <title>${title}</title>
       </head>
-      <body class="${themes?.join(" ")}">
+      <body class="${themes?.join(" ")} program">
         <div class="background"></div>
         ${content}
       </body>

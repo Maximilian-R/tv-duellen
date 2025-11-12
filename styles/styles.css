@@ -1,9 +1,8 @@
 @layer default, theme;
 
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Nabla:EDPT@43&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"); */
 
 @import "./votes.css";
 @import "./picture.css";
@@ -63,48 +62,20 @@
     base-palette: 2;
   }
 
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin: 2rem 0;
-
-    /* font-family: "Tilt Neon", sans-serif;
-
-    font-family: "Nabla", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "EDPT" 43, "EHLT" 100;
-    font-palette: --2;
-    color: #ffffff;
-    text-shadow: -3px -2px 1px #ffffff;
-
-    
-
+  .program h1 {
     font-family: "Neonderthaw", cursive;
-    font-weight: 400;
-    font-style: normal;
-
-    font-family: "Tilt Neon", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "XROT" 0, "YROT" 0;
-
-    --color: #6d85e8;
-    --text-color: #ffffff;
-
-    padding: 1rem;
+    font-weight: 100;
+    font-size: 4rem;
     line-height: 1;
     color: var(--text-color);
-    text-shadow: 0 -2px 0px #4b9599, 0 0 10px var(--color),
-      0 0 20px var(--color);
-    -webkit-box-reflect: below -2.6rem linear-gradient(transparent, #0004);
-    text-shadow: 0 -2px 0px #ff7ff2, 0 0 10px var(--color),
-      0 0 20px var(--color);
+    text-shadow: 0px 3px 0px rgb(255, 255, 255), 0px 7px 10px #000000f2;
+    -webkit-box-reflect: below -0.2em linear-gradient(#00000042, #00000036);
 
-    background: #00000085;
-    border-radius: 0.5rem;  */
+    margin: 3rem 0;
+  }
+
+  .program.theme-white h1 {
+    text-shadow: 0px 3px 0px rgb(0, 0, 0), 0px 7px 10px #fffffff2;
   }
 
   ul,

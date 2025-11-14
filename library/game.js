@@ -52,7 +52,7 @@ export class Leaderboard {
         });
     });
     return Object.entries(leaderboard).sort(
-      ([_a, a], [_b, b]) => b.points - a.points
+      ([_a, a], [_b, b]) => b.trophies - a.trophies
     );
   }
 }

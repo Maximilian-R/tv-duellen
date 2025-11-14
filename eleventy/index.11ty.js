@@ -43,12 +43,15 @@ export default {
         <body class="default theme-white">
           <div class="background"></div>
           <header id="logotype">
-            <img
-              id="logotype-image"
-              src="./images/tv-duellen.png"
-              alt="TV-Duellen Logo"
-              style="max-width: min(100%, 600px);"
-            />
+            <div id="logotype-image">
+              <img src="./images/tv-duellen.png" alt="TV-Duellen Logo" />
+              <div>
+                <span>LIVE JUST NU:</span>
+                <span>Förrädarna</span>
+                <span>Robinson - Idol</span>
+              </div>
+            </div>
+
             ${false ? createEmojis(["🎙️", "🥕", "🌴"]) : undefined}
           </header>
           <main>

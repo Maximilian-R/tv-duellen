@@ -26,6 +26,10 @@ export default {
       ({ data }) => data.game.meta.name
     );
 
+    const livePrograms = collections.program.filter(({ data }) =>
+      data.game.isLive()
+    );
+
     const content = html`<!DOCTYPE html>
       <html lang="sv-SE">
         <head>
@@ -47,8 +51,11 @@ export default {
               <img src="./images/tv-duellen.png" alt="TV-Duellen Logo" />
               <div>
                 <span>LIVE JUST NU:</span>
-                <span>Förrädarna</span>
-                <span>Robinson - Idol</span>
+                <span>
+                  ${livePrograms
+                    .map((program) => program.data.game.meta.name)
+                    .join(" ")}
+                </span>
               </div>
             </div>
 

@@ -99,6 +99,12 @@ export class Game {
     };
   }
 
+  isLive() {
+    return this.contestants.some(
+      (contestant) => contestant.state === PLAYER_STATE.PLAYING
+    );
+  }
+
   sortContestants() {
     this.contestants
       .sort((a, b) => a.name.localeCompare(b.name))

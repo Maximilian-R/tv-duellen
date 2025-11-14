@@ -42,8 +42,9 @@ export default {
         </head>
         <body class="default theme-white">
           <div class="background"></div>
-          <header>
+          <header id="logotype">
             <img
+              id="logotype-image"
               src="./images/tv-duellen.png"
               alt="TV-Duellen Logo"
               style="max-width: min(100%, 600px);"

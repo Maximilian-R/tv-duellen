@@ -146,3 +146,27 @@
 [data-dialog-trigger] {
   cursor: pointer;
 }
+
+#logotype {
+  flex-shrink: 0;
+  top: 0;
+}
+
+#logotype-image {
+  animation: shrinking forwards linear;
+  animation-timeline: scroll();
+}
+
+@keyframes shrinking {
+  0% {
+    transform: scale(1) rotate(0deg) translate(0, 0);
+  }
+
+  40% {
+    transform: scale(0.6) rotate(20deg) translate(0, 0);
+  }
+
+  100% {
+    transform: scale(0.6) rotate(20deg) translate(0, 0);
+  }
+}

@@ -43,7 +43,11 @@ export default {
         <body class="default theme-white">
           <div class="background"></div>
           <header>
-            <h1>TV-Duellen</h1>
+            <img
+              src="./images/tv-duellen.png"
+              alt="TV-Duellen Logo"
+              style="max-width: min(100%, 600px);"
+            />
             ${false ? createEmojis(["🎙️", "🥕", "🌴"]) : undefined}
           </header>
           <main>

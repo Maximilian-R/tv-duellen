@@ -34,5 +34,6 @@ game.eliminate("Joel").reason("MURDER");
 game.eliminate("Samuel");
 game.eliminate("Jan").reason("MURDER");
 game.eliminate("Alexander");
+game.eliminate("Britta");
 
 export { game };

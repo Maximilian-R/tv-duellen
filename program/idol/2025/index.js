@@ -25,5 +25,6 @@ game.contestant("Tuva").bet("AR");
 game.eliminate("Allan", "Alma", "Nora", "Rasmus");
 game.eliminate("Malva", "Rebecca");
 game.eliminate("Jénovic", "Karl");
+game.eliminate("Sofia", "Love B");
 
 export { game };

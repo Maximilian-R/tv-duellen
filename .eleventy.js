@@ -1,5 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images/tv-duellen.png");
+  eleventyConfig.addPassthroughCopy("images/kryss.png");
   eleventyConfig.addPassthroughCopy("images/favicon.jpg");
   eleventyConfig.addPassthroughCopy("images/curtain2560x1440.png");
   eleventyConfig.addPassthroughCopy("images/curtain1000x2000.png");

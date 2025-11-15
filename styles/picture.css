@@ -62,10 +62,14 @@ picture[state]::after {
 
 picture[state="ELIMINATED"]::after {
   content: var(--eliminate-icon);
+
+  content: "";
+  background-image: url("../../images/kryss.png");
+  background-position: center;
+  background-size: contain;
 }
 
 picture[reason="MURDER"]::after {
-  content: "⚰️";
 }
 
 picture[position]::after {

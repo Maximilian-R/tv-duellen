@@ -20,7 +20,7 @@ export default async ({ title, themes, content }) => {
         <title>${title}</title>
       </head>
       <body class="${themes?.join(" ")} program">
-        <div class="background"></div>
+        <div class="background page-background"></div>
         ${content}
       </body>
     </html>`;

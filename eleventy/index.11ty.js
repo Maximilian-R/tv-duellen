@@ -45,7 +45,7 @@ export default {
           <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
         </head>
         <body class="default theme-white">
-          <div class="background"></div>
+          <div class="background page-background"></div>
           <header id="logotype">
             <div id="logotype-image">
               <img src="./images/tv-duellen.png" alt="TV-Duellen Logo" />

@@ -1,3 +1,7 @@
+[data-dialog-trigger] {
+  cursor: pointer;
+}
+
 dialog {
   z-index: 100;
   padding: 1rem;

@@ -1,0 +1,53 @@
+#logotype {
+}
+
+#logotype-image {
+  animation: shrinking forwards linear;
+  animation-timeline: scroll();
+  position: relative;
+  font-size: min(100vw - 2rem, 600px);
+  line-height: 0;
+}
+
+#logotype-image img {
+  max-width: min(100vw - 2rem, 600px);
+}
+
+#logotype-image div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-size: 2.6%;
+  position: absolute;
+  top: 62.5%;
+  left: -1.5%;
+  width: 100%;
+  font-weight: 900;
+  line-height: 1;
+}
+
+#logotype-image div span {
+  text-align: center;
+  max-width: 25%;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@keyframes shrinking {
+  0% {
+    transform: scale(1) rotate(0deg) translate(0, 0);
+  }
+
+  40% {
+    transform: scale(0.6) rotate(20deg) translate(0, 0);
+  }
+
+  100% {
+    transform: scale(0.6) rotate(20deg) translate(0, 0);
+  }
+}

@@ -41,7 +41,7 @@ export function createHeader({ meta, emojis }) {
   return html`
     <header>
       <a class="home" href="../../../">Tillbaka</a>
-      <h1>${unsafeHTML(meta.title ?? meta.name)}</h1>
+      <h1 class="neon-sign">${unsafeHTML(meta.title ?? meta.name)}</h1>
       <h2>${meta.year}${meta.version ? " " + meta.versionTitle : ""}</h2>
       ${createEmojis(emojis)}
     </header>
@@ -88,7 +88,7 @@ export function createContestant(
 }
 
 export function createDialog({ name, votes, img, role }) {
-  return html` <dialog>
+  return html` <dialog class="background">
     <form method="dialog">
       <button type="submit">Stäng</button>
     </form>

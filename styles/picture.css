@@ -74,6 +74,7 @@ picture[reason="MURDER"]::after {
 
 picture[position]::after {
   content: attr(position);
+  background-image: none;
 }
 
 picture[state="QUIT"]::after {

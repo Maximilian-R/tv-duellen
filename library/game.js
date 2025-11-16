@@ -126,6 +126,16 @@ class Contestant {
     this._votes = [];
   }
 
+  primary(name) {
+    this.bet(name, true);
+    return this;
+  }
+
+  secondary(name) {
+    this.bet(name, false);
+    return this;
+  }
+
   bet(name, primary = true) {
     this._votes.push({ name, primary });
     return this;

@@ -18,16 +18,15 @@ game.contestant("Ebba");
 game.contestant("Emilly");
 game.contestant("Emma");
 game.contestant("Jacob").quit();
-game.contestant("Jasmine");
+game.contestant("Jasmine").eliminate();
 game.contestant("Johan");
 game.contestant("Kevin");
 game.contestant("Matteo");
-game.contestant("René");
+game.contestant("René").eliminate();
 game.contestant("Salah").quit();
 game.contestant("Samuel");
 game.contestant("Susanne");
-game.contestant("Ulf");
-
+game.contestant("Ulf").eliminate();
 game.contestant("Lea");
 game.contestant("Per");
 

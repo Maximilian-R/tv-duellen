@@ -9,26 +9,32 @@ const game = new Game(
 
 const traitor = "🎭";
 
-game.contestant("Ahmed", traitor);
+game
+  .contestant("Ahmed", traitor)
+  .primary("OR")
+  .primary("JR")
+  .primary("AR")
+  .primary("FL")
+  .primary("RS");
 game.contestant("Alexander", traitor);
-game.contestant("Alexandra");
+game.contestant("Alexandra").secondary("RS");
 game.contestant("Britta");
-game.contestant("Cleo");
-game.contestant("Gry");
-game.contestant("Isabella");
+game.contestant("Cleo").secondary("MR");
+game.contestant("Gry").secondary("AR");
+game.contestant("Isabella").primary("ER");
 game.contestant("Jan");
-game.contestant("Janina");
+game.contestant("Janina").secondary("OR");
 game.contestant("Joel");
 game.contestant("Johannes", traitor);
-game.contestant("Malick");
+game.contestant("Malick").primary("LR");
 game.contestant("Malou");
 game.contestant("Marcus");
 game.contestant("Matilda", traitor);
-game.contestant("Mona");
+game.contestant("Mona").secondary("JR");
 game.contestant("Rebecka");
 game.contestant("Samuel");
-game.contestant("Tom");
-game.contestant("Wilmer");
+game.contestant("Tom").secondary("FL");
+game.contestant("Wilmer").primary("MR");
 
 game.eliminate("Joel").reason("MURDER");
 game.eliminate("Samuel");

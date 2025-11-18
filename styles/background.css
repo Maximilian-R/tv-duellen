@@ -51,6 +51,6 @@
 
 @media screen and (max-aspect-ratio: 3/4), screen and (max-width: 768px) {
   .förrädarna .background {
-    background-image: url("../../images/curtain1000x2000.png");
+    background-image: url("../images/curtain1000x2000.png");
   }
 }

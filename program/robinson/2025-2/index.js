@@ -10,7 +10,7 @@ game.contestant("Agust");
 game.contestant("Akink");
 game.contestant("Ania");
 game.contestant("Ann-Helene").eliminate();
-game.contestant("Anna");
+game.contestant("Anna").eliminate();
 game.contestant("Carin");
 game.contestant("Charlie");
 game.contestant("Diana").quit();
@@ -27,7 +27,7 @@ game.contestant("Salah").quit();
 game.contestant("Samuel");
 game.contestant("Susanne");
 game.contestant("Ulf").eliminate();
-game.contestant("Lea");
+game.contestant("Lea").eliminate();
 game.contestant("Per");
 
 export { game };

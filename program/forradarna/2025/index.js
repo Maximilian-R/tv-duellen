@@ -29,7 +29,7 @@ game.contestant("Johannes", traitor);
 game.contestant("Malick").primary("LR");
 game.contestant("Malou");
 game.contestant("Marcus");
-game.contestant("Matilda", traitor);
+game.contestant("Matilda", traitor).bet("LR");
 game.contestant("Mona").secondary("JR");
 game.contestant("Rebecka");
 game.contestant("Samuel");

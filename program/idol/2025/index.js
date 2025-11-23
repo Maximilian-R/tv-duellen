@@ -26,5 +26,6 @@ game.eliminate("Allan", "Alma", "Nora", "Rasmus");
 game.eliminate("Malva", "Rebecca");
 game.eliminate("Jénovic", "Karl");
 game.eliminate("Sofia", "Love B");
+game.eliminate("Arvid");
 
 export { game };

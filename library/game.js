@@ -75,6 +75,11 @@ export class Game {
     return contestant;
   }
 
+  win(name) {
+    const winner = this.contestants.find((c) => c.name === name);
+    winner.win();
+  }
+
   eliminate(...names) {
     const position =
       this.contestants.filter(

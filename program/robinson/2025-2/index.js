@@ -8,14 +8,14 @@ const game = new Game(
 
 game.contestant("Agust").eliminate();
 game.contestant("Akink").secondary("RS").secondary("MR");
-game.contestant("Ania");
+game.contestant("Ania").eliminate();
 game.contestant("Ann-Helene").eliminate();
 game.contestant("Anna").eliminate();
 game.contestant("Carin");
 game.contestant("Charlie").eliminate();
 game.contestant("Diana").quit();
 game.contestant("Ebba").eliminate();
-game.contestant("Emilly");
+game.contestant("Emilly").eliminate();
 game.contestant("Emma");
 game.contestant("Jacob").quit();
 game.contestant("Jasmine").eliminate();

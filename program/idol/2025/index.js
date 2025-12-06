@@ -28,5 +28,8 @@ game.eliminate("Jénovic", "Karl");
 game.eliminate("Sofia", "Love B");
 game.eliminate("Arvid");
 game.eliminate("Jonas", "Ingrid");
+game.eliminate("Nicolina");
+game.eliminate("Love S");
+game.win("Tuva");
 
 export { game };

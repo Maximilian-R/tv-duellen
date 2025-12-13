@@ -19,17 +19,18 @@ game.contestant("Emilly").eliminate();
 game.contestant("Emma").eliminate();
 game.contestant("Jacob").quit();
 game.contestant("Jasmine").eliminate();
-game.contestant("Johan");
+game.contestant("Johan").win();
 game.contestant("Kevin").eliminate();
 game
   .contestant("Matteo")
   .primary("RS")
   .primary("AR")
   .primary("JR")
-  .primary("OR");
+  .primary("OR")
+  .eliminate();
 game.contestant("René").eliminate();
 game.contestant("Salah").quit();
-game.contestant("Samuel").secondary("AR").primary("MR");
+game.contestant("Samuel").secondary("AR").primary("MR").eliminate();
 game.contestant("Susanne").eliminate();
 game.contestant("Ulf").eliminate();
 game.contestant("Lea").eliminate();

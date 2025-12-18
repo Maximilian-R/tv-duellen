@@ -49,5 +49,11 @@ game.eliminate("Janina").reason("MURDER");
 game.eliminate("Gry");
 game.eliminate("Malou").reason("MURDER");
 game.eliminate("Alexandra");
+game.eliminate("Malick");
+game.eliminate("Wilmer");
+game.eliminate("Matilda");
+
+game.eliminate("Cleo", "Marcus", "Tom");
+game.win("Ahmed");
 
 export { game };

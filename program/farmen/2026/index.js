@@ -19,7 +19,9 @@ game.contestant("Niklas");
 game.contestant("Nils");
 game.contestant("Pim");
 game.contestant("Stephanie");
-game.contestant("Tindra");
+game.contestant("Tindra").eliminate();
 game.contestant("Vanessa");
+
+// game.eliminate("Tindra");
 
 export { game };

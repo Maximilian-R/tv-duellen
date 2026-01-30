@@ -1,5 +1,6 @@
 import { game as Farmen2024 } from "../../program/farmen/2024/index.js";
 import { game as Farmen2025 } from "../../program/farmen/2025/index.js";
+import { game as Farmen2026 } from "../../program/farmen/2026/index.js";
 import { game as Idol2023 } from "../../program/idol/2023/index.js";
 import { game as Idol2024 } from "../../program/idol/2024/index.js";
 import { game as Idol2025 } from "../../program/idol/2025/index.js";
@@ -17,6 +18,7 @@ export default [
   Idol2025,
   Farmen2024,
   Farmen2025,
+  Farmen2026,
   Robinson20241,
   Robinson20242,
   Robinson20251,

@@ -21,7 +21,13 @@ game.contestant("Pim").quit();
 game.contestant("Stephanie");
 game.contestant("Tindra").eliminate();
 game.contestant("Vanessa");
+game.contestant("Hampus");
+game.contestant("Jörgen");
+game.contestant("Nowaleya");
 
 // game.eliminate("Tindra");
+// game.eliminate("Ayda");
+// game.eliminate("Jonas");
+// game.quit(["Nils", "Pim"]);
 
 export { game };

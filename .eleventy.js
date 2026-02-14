@@ -4,7 +4,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("program/**/*.jpg");
   eleventyConfig.addPassthroughCopy("library/animation.js");
   eleventyConfig.addPassthroughCopy("library/dialog.js");
-  eleventyConfig.addPassthroughCopy("library/image.js");
 
   eleventyConfig.setOutputDirectory("dist");
   eleventyConfig.setInputDirectory("eleventy");

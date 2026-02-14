@@ -7,7 +7,7 @@ const PLAYER_STATE = {
 
 export const getPlayerStateLabel = (state) => {
   return Object.entries(PLAYER_STATE).find(
-    ([key, value]) => value === state
+    ([key, value]) => value === state,
   )?.[0];
 };
 
@@ -30,7 +30,7 @@ export class Leaderboard {
 
     this.games.forEach((game) => {
       const podium = game.contestants.filter(
-        (contestant) => contestant.position <= this.podiumPoints.length
+        (contestant) => contestant.position <= this.podiumPoints.length,
       );
       podium.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
@@ -42,7 +42,7 @@ export class Leaderboard {
 
     this.games.forEach((game) => {
       const winner = game.contestants.find(
-        (contestant) => contestant.state === PLAYER_STATE.WINNER
+        (contestant) => contestant.state === PLAYER_STATE.WINNER,
       );
       const hasPrimary = winner?.votes.some((vote) => vote.primary);
       winner?.votes
@@ -52,17 +52,23 @@ export class Leaderboard {
         });
     });
     return Object.entries(leaderboard).sort(
-      ([_a, a], [_b, b]) => b.trophies - a.trophies
+      ([_a, a], [_b, b]) => b.trophies - a.trophies,
     );
   }
 }
 
 export class Game {
-  constructor(meta, theme, emojis, displayPosition = true) {
+  constructor(
+    meta,
+    theme,
+    emojis,
+    displayPosition = true,
+    defaultImageFormat = ".jpg",
+  ) {
     this.meta = meta;
     this.emojis = emojis;
     this.contestants = [];
-    this.defaultImageFormat = ".jpg";
+    this.defaultImageFormat = defaultImageFormat;
     this.theme = theme;
     this.displayPosition = displayPosition;
   }
@@ -83,13 +89,13 @@ export class Game {
   eliminate(...names) {
     const position =
       this.contestants.filter(
-        (contestant) => contestant.state === PLAYER_STATE.PLAYING
+        (contestant) => contestant.state === PLAYER_STATE.PLAYING,
       ).length -
       names.length +
       1;
 
     const eliminatedContestants = names.map((name) =>
-      this.contestants.find((c) => c.name === name)
+      this.contestants.find((c) => c.name === name),
     );
     eliminatedContestants.forEach((contestant) => {
       contestant.eliminate(position);
@@ -106,7 +112,7 @@ export class Game {
 
   isLive() {
     return this.contestants.some(
-      (contestant) => contestant.state === PLAYER_STATE.PLAYING
+      (contestant) => contestant.state === PLAYER_STATE.PLAYING,
     );
   }
 

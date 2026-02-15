@@ -9,8 +9,6 @@ const game = new Game(
   },
   ["melodifestivalen", "rounded", "theme-white"],
   ["🪩", "🎈", "🎤"],
-  true,
-  ".webp",
 );
 game.contestant("Greczula");
 game.contestant("A-teens");

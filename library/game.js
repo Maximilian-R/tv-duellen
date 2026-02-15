@@ -58,17 +58,11 @@ export class Leaderboard {
 }
 
 export class Game {
-  constructor(
-    meta,
-    theme,
-    emojis,
-    displayPosition = true,
-    defaultImageFormat = ".jpg",
-  ) {
+  constructor(meta, theme, emojis, displayPosition = true) {
     this.meta = meta;
     this.emojis = emojis;
     this.contestants = [];
-    this.defaultImageFormat = defaultImageFormat;
+    this.defaultImageFormat = ".webp";
     this.theme = theme;
     this.displayPosition = displayPosition;
   }

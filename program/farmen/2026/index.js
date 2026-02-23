@@ -14,20 +14,23 @@ game.contestant("Bosse");
 game.contestant("Erik");
 game.contestant("Jenny");
 game.contestant("Jonas").eliminate();
-game.contestant("Kevin");
+game.contestant("Kevin").eliminate();
 game.contestant("Niklas");
 game.contestant("Nils").quit();
 game.contestant("Pim").quit();
 game.contestant("Stephanie");
 game.contestant("Tindra").eliminate();
 game.contestant("Vanessa");
-game.contestant("Hampus");
+game.contestant("Hampus").quit();
 game.contestant("Jörgen");
-game.contestant("Nowaleya");
+game.contestant("Nowaleya").eliminate();
 
 // game.eliminate("Tindra");
 // game.eliminate("Ayda");
 // game.eliminate("Jonas");
 // game.quit(["Nils", "Pim"]);
+// game.eliminate("Kevin");
+// game.quit("Hampus");
+// game.eliminate("Nowaleya");
 
 export { game };

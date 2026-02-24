@@ -50,6 +50,10 @@
   top: 2px;
 }
 
+.leaderboard .rank {
+  display: none;
+}
+
 .votes {
   display: flex;
   flex-direction: column;

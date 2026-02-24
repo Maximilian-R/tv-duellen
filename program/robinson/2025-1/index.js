@@ -3,7 +3,8 @@ import { Game } from "../../../library/game.js";
 const game = new Game(
   { name: "Robinson", year: 2025, version: 1, versionTitle: "Vår" },
   ["robinson", "rounded"],
-  ["🌴", "🥥", "🔥"]
+  ["🌴", "🥥", "🔥"],
+  false,
 );
 
 game.contestant("Clara").quit();
@@ -28,12 +29,12 @@ game.contestant("Amanda Å").quit();
 game.contestant("Andreas L").quit();
 game.contestant("Sewit").eliminate();
 
-game.contestant("Sara").eliminate();
+game.contestant("Sara").eliminate(2);
 game.contestant("Amanda E").eliminate();
 game.contestant("Pascal").quit();
 game.contestant("Pål").bet("AR", false).bet("RS", false).bet("MR").eliminate();
 game.contestant("Fabian").quit();
 game.contestant("Sophie").bet("AR").bet("JR").bet("OR").eliminate();
-game.contestant("Pontus").bet("OR", false).eliminate();
+game.contestant("Pontus").bet("OR", false).eliminate(2);
 
 export { game };

@@ -11,10 +11,21 @@ export const getPlayerStateLabel = (state) => {
   )?.[0];
 };
 
+// Either give medals based on rarity, did you guess on the winner alone, with others, or with secondary votes
+// or give medals based on position, 1st, 2nd, 3rd,
+// or combination of both?
+// give medals based on position, but score is based on rarity?
 export class Leaderboard {
   constructor(games) {
     this.games = games;
-    this.podiumPoints = [100, 0, 0];
+    this.podiumPoints = [100, 50, 25];
+    this.medals = ["🥇", "🥈", "🥉"];
+  }
+
+  sortMedals(medals) {
+    return medals.sort(
+      (a, b) => this.medals.indexOf(a) - this.medals.indexOf(b),
+    );
   }
 
   get() {
@@ -23,7 +34,7 @@ export class Leaderboard {
     this.games.forEach((game) => {
       game.contestants.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
-          leaderboard[vote.name] = { trophies: 0, points: 0 };
+          leaderboard[vote.name] = { trophies: [], points: 0 };
         });
       });
     });
@@ -35,24 +46,36 @@ export class Leaderboard {
       podium.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
           leaderboard[vote.name].points +=
-            this.podiumPoints[contestant.position - 1] * (vote.primary ? 1 : 0);
+            this.podiumPoints[contestant.position - 1];
+          leaderboard[vote.name].trophies.push(
+            this.medals[contestant.position - 1],
+          );
         });
       });
     });
 
-    this.games.forEach((game) => {
-      const winner = game.contestants.find(
-        (contestant) => contestant.state === PLAYER_STATE.WINNER,
-      );
-      const hasPrimary = winner?.votes.some((vote) => vote.primary);
-      winner?.votes
-        .filter((vote) => (hasPrimary ? vote.primary : true))
-        .forEach((vote) => {
-          leaderboard[vote.name].trophies = leaderboard[vote.name].trophies + 1;
-        });
+    // this.games.forEach((game) => {
+    //   const winner = game.contestants.find(
+    //     (contestant) => contestant.state === PLAYER_STATE.WINNER,
+    //   );
+    //   // const hasPrimary = winner?.votes.some((vote) => vote.primary);
+    //   winner?.votes.forEach((vote) => {
+    //     if (vote.primary && winner.primaryVotes === 1) {
+    //       leaderboard[vote.name].trophies.push("🥇");
+    //     } else if (vote.primary) {
+    //       leaderboard[vote.name].trophies.push("🥈");
+    //     } else {
+    //       leaderboard[vote.name].trophies.push("🥉");
+    //     }
+    //   });
+    // });
+
+    Object.entries(leaderboard).forEach(([_, entry]) => {
+      entry.trophies = this.sortMedals(entry.trophies);
     });
+
     return Object.entries(leaderboard).sort(
-      ([_a, a], [_b, b]) => b.trophies - a.trophies,
+      ([_a, a], [_b, b]) => b.points - a.points,
     );
   }
 }

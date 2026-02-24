@@ -12,21 +12,19 @@ export function renderToString(content) {
 export function createLeaderboard(leaderboard) {
   leaderboard = leaderboard.get();
 
-  // <div class="rank">${index + 1}</div>
-  // <div class="points">${value.points}</div>
   return html`<div class="leaderboard-container">
     <h2>Leaderboard</h2>
     <ol class="leaderboard">
       ${leaderboard.map(
         ([key, value], index) =>
           html`<li>
+            <div class="rank">${index + 1}</div>
             <div data-name="${key}" class="vote">${key}</div>
             <div class="stats">
-              <div class="trophies">
-                ${[...Array(value.trophies).keys()].map((v) => "🏆")}
-              </div>
+              <div class="trophies">${value.trophies}</div>
+              <div class="points">${value.points}</div>
             </div>
-          </li>`
+          </li>`,
       )}
     </ol>
   </div>`;
@@ -52,7 +50,7 @@ export function createEmojis(emojis, small = false) {
   return html`<div class="emojis animate ${small ? "small" : undefined}">
     ${emojis.map(
       (emoji, index) =>
-        html`<div style="--animation-order: ${index};">${emoji}</div>`
+        html`<div style="--animation-order: ${index};">${emoji}</div>`,
     )}
   </div>`;
 }
@@ -61,7 +59,7 @@ export function createMain({ contestants, emojis, displayPosition }) {
   return html`<main>
     <ul>
       ${contestants.map((contestant) =>
-        createContestant(contestant, displayPosition)
+        createContestant(contestant, displayPosition),
       )}
     </ul>
     ${createEmojis(emojis)}
@@ -70,7 +68,7 @@ export function createMain({ contestants, emojis, displayPosition }) {
 
 export function createContestant(
   { img, name, votes, state, position, role, reason },
-  displayPosition
+  displayPosition,
 ) {
   return html`<li data-dialog-trigger>
     <picture
@@ -143,7 +141,7 @@ export function createVotes(votes, showAll = false, animate = true) {
           data-primary=${primary}
         >
           ${name}
-        </div>`
+        </div>`,
     )}
     ${hiddenVotes}
   </div>`;

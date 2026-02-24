@@ -3,16 +3,17 @@ import { Game } from "../../../library/game.js";
 const game = new Game(
   { name: "Robinson", year: 2024, version: 1, versionTitle: "Vår" },
   ["robinson", "rounded"],
-  ["🌴", "🥥", "🔥"]
+  ["🌴", "🥥", "🔥"],
+  false,
 );
 
 game.contestant("Ci").eliminate().bet("MR").bet("OR", false);
 game.contestant("Alma").eliminate();
 game.contestant("Hanna").quit();
-game.contestant("Maureen").eliminate();
+game.contestant("Maureen").eliminate(2);
 game.contestant("Olivia").win();
 game.contestant("Zayera").eliminate();
-game.contestant("Simone").eliminate();
+game.contestant("Simone").eliminate(3);
 game.contestant("Karin").eliminate();
 game.contestant("Desirée").quit();
 game.contestant("Charlotta").quit().bet("RS", false);

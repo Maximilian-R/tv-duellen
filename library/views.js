@@ -14,6 +14,7 @@ export function createLeaderboard(leaderboard) {
 
   return html`<div class="leaderboard-container">
     <h2>Leaderboard</h2>
+
     <ol class="leaderboard">
       ${leaderboard.map(
         ([key, value], index) =>
@@ -27,6 +28,7 @@ export function createLeaderboard(leaderboard) {
           </li>`,
       )}
     </ol>
+    ${createEmojis(["🥇 100", "🥈 50", "🥉 25"], true, true)}
   </div>`;
 }
 
@@ -46,8 +48,12 @@ export function createHeader({ meta, emojis }) {
   `;
 }
 
-export function createEmojis(emojis, small = false) {
-  return html`<div class="emojis animate ${small ? "small" : undefined}">
+export function createEmojis(emojis, small = false, column = false) {
+  return html`<div
+    class="emojis animate ${small ? "small" : undefined} ${column
+      ? "column"
+      : undefined}"
+  >
     ${emojis.map(
       (emoji, index) =>
         html`<div style="--animation-order: ${index};">${emoji}</div>`,

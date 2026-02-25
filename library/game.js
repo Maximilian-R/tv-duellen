@@ -11,23 +11,15 @@ export const getPlayerStateLabel = (state) => {
   )?.[0];
 };
 
-// Either give medals based on rarity, did you guess on the winner alone, with others, or with secondary votes
-// or give medals based on position, 1st, 2nd, 3rd,
-// or combination of both?
-// give medals based on position, but score is based on rarity?
+// Medals are given for votes on 1st, 2nd, 3rd place
+// Secondary votes gives less score per medal than primary votes
+// TODO: bonus score when voting for a winner alone?
 export class Leaderboard {
   constructor(games) {
     this.games = games;
     this.podiumPoints = [100, 50, 25];
     this.primaryVoteFactor = 1;
     this.secondaryVoteFactor = 0.6;
-    this.medals = ["🥇", "🥈", "🥉"];
-  }
-
-  sortMedals(medals) {
-    return medals.sort(
-      (a, b) => this.medals.indexOf(a) - this.medals.indexOf(b),
-    );
   }
 
   get() {

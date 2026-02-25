@@ -22,13 +22,33 @@ export function createLeaderboard(leaderboard) {
             <div class="rank">${index + 1}</div>
             <div data-name="${key}" class="vote">${key}</div>
             <div class="stats">
-              <div class="trophies">${value.trophies}</div>
+              ${null &&
+              html`<div class="trophies">
+                🥇${value.trophies[1]} 🥈${value.trophies[2]}
+                🥉${value.trophies[3]}
+              </div>`}
+              ${true &&
+              html` <div class="trophies">
+                ${[...Array(value.trophies[1]).keys()].map(() => "🥇")}${[
+                  ...Array(value.trophies[2]).keys(),
+                ].map(() => "🥈")}${[...Array(value.trophies[3]).keys()].map(
+                  () => "🥉",
+                )}
+              </div>`}
+
               <div class="points">${value.points}</div>
             </div>
           </li>`,
       )}
     </ol>
-    ${createEmojis(["🥇 100", "🥈 50", "🥉 25"], true, true)}
+
+    <div class="leaderboard-info">
+      <h3>Poängberäkning</h3>
+      ${createEmojis(["🥇 100 ", "🥈 50", "🥉 25"], true, true)}
+
+      <h3>Reservröster</h3>
+      ${createEmojis(["🥇 60 ", "🥈 30", "🥉 15"], true, true)}
+    </div>
   </div>`;
 }
 

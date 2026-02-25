@@ -19,6 +19,8 @@ export class Leaderboard {
   constructor(games) {
     this.games = games;
     this.podiumPoints = [100, 50, 25];
+    this.primaryVoteFactor = 1;
+    this.secondaryVoteFactor = 0.6;
     this.medals = ["🥇", "🥈", "🥉"];
   }
 
@@ -34,7 +36,19 @@ export class Leaderboard {
     this.games.forEach((game) => {
       game.contestants.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
-          leaderboard[vote.name] = { trophies: [], points: 0 };
+          leaderboard[vote.name] = {
+            trophies: { 1: 0, 2: 0, 3: 0 },
+            points: 0,
+            totalVotes: 0,
+          };
+        });
+      });
+    });
+
+    this.games.forEach((game) => {
+      game.contestants.forEach((contestant) => {
+        contestant.votes.forEach((vote) => {
+          leaderboard[vote.name].totalVotes += 1;
         });
       });
     });
@@ -45,33 +59,13 @@ export class Leaderboard {
       );
       podium.forEach((contestant) => {
         contestant.votes.forEach((vote) => {
+          leaderboard[vote.name].totalVotes += 1;
           leaderboard[vote.name].points +=
-            this.podiumPoints[contestant.position - 1];
-          leaderboard[vote.name].trophies.push(
-            this.medals[contestant.position - 1],
-          );
+            this.podiumPoints[contestant.position - 1] *
+            (vote.primary ? this.primaryVoteFactor : this.secondaryVoteFactor);
+          leaderboard[vote.name].trophies[contestant.position] += 1;
         });
       });
-    });
-
-    // this.games.forEach((game) => {
-    //   const winner = game.contestants.find(
-    //     (contestant) => contestant.state === PLAYER_STATE.WINNER,
-    //   );
-    //   // const hasPrimary = winner?.votes.some((vote) => vote.primary);
-    //   winner?.votes.forEach((vote) => {
-    //     if (vote.primary && winner.primaryVotes === 1) {
-    //       leaderboard[vote.name].trophies.push("🥇");
-    //     } else if (vote.primary) {
-    //       leaderboard[vote.name].trophies.push("🥈");
-    //     } else {
-    //       leaderboard[vote.name].trophies.push("🥉");
-    //     }
-    //   });
-    // });
-
-    Object.entries(leaderboard).forEach(([_, entry]) => {
-      entry.trophies = this.sortMedals(entry.trophies);
     });
 
     return Object.entries(leaderboard).sort(

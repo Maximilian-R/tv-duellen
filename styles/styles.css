@@ -115,6 +115,7 @@
   a:focus-visible,
   button:focus-visible {
     outline: var(--text-color) dashed 3px;
+    outline-offset: 3px;
   }
 
   a:hover,

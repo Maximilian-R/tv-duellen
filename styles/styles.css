@@ -95,7 +95,21 @@
     color: white;
     text-decoration: none;
     cursor: pointer;
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+    transition:
+      box-shadow 200ms ease-in-out,
+      transform 200ms ease-in-out;
+  }
+
+  [data-live]::before {
+    content: "LIVE";
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: red;
+    color: white;
+    font-size: 0.5rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.3rem;
   }
 
   a:focus-visible,
@@ -127,11 +141,15 @@
     font-weight: 100;
     line-height: 1;
     color: var(--text-color);
-    text-shadow: 0px 3px 0px rgb(255, 255, 255), 0px 7px 10px #000000f2;
+    text-shadow:
+      0px 3px 0px rgb(255, 255, 255),
+      0px 7px 10px #000000f2;
     -webkit-box-reflect: below -0.2em linear-gradient(#00000042, #00000036);
   }
 
   .theme-white .neon-sign {
-    text-shadow: 0px 3px 0px rgb(0, 0, 0), 0px 7px 10px #fffffff2;
+    text-shadow:
+      0px 3px 0px rgb(0, 0, 0),
+      0px 7px 10px #fffffff2;
   }
 }

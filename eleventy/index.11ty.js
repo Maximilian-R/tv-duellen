@@ -1,4 +1,5 @@
 import { html } from "@lit-labs/ssr";
+import { nothing } from "lit";
 import {
   renderToString,
   createEmojis,
@@ -23,11 +24,11 @@ export default {
   render: ({ collections }) => {
     const groups = groupBy(
       collections.program,
-      ({ data }) => data.game.meta.name
+      ({ data }) => data.game.meta.name,
     );
 
     const livePrograms = collections.program.filter(({ data }) =>
-      data.game.isLive()
+      data.game.isLive(),
     );
 
     const content = html`<!DOCTYPE html>
@@ -71,21 +72,26 @@ export default {
 
                   <ul>
                     ${value.map(
-                      (program) => html`<li>
-                        <a href=".${program.page.url}"
-                          >${program.data.game.meta.year}${program.data.game
-                            .meta.version
-                            ? " " + program.data.game.meta.versionTitle
-                            : ""}</a
-                        >
-                      </li>`
+                      (program) =>
+                        html`<li>
+                          <a
+                            href=".${program.page.url}"
+                            data-live=${program.data.game.isLive()
+                              ? ""
+                              : nothing}
+                            >${program.data.game.meta.year}${program.data.game
+                              .meta.version
+                              ? " " + program.data.game.meta.versionTitle
+                              : ""}</a
+                          >
+                        </li>`,
                     )}
-                  </ul>`
+                  </ul>`,
             )}
             ${createLeaderboard(
               new Leaderboard(
-                collections.program.map((program) => program.data.game)
-              )
+                collections.program.map((program) => program.data.game),
+              ),
             )}
           </main>
         </body>

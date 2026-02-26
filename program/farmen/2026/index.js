@@ -6,14 +6,14 @@ const game = new Game(
   ["🥕", "🌽", "🥔"],
   false,
 );
-game.contestant("Ahmed").secondary("MR");
+game.contestant("Ahmed");
 game.contestant("Alexander").primary("AR");
 game.contestant("Amanda");
 game.contestant("Angelica");
 game.contestant("Ayda");
 game.contestant("Bosse");
-game.contestant("Erik").primary("JR");
-game.contestant("Jenny").secondary("RS");
+game.contestant("Erik").primary("JR").secondary("MR");
+game.contestant("Jenny").secondary("RS").secondary("OR");
 game.contestant("Jonas");
 game.contestant("Kevin");
 game.contestant("Niklas");
@@ -28,7 +28,7 @@ game
 game.contestant("Tindra");
 game.contestant("Vanessa");
 game.contestant("Hampus").quit();
-game.contestant("Jörgen");
+game.contestant("Jörgen").primary("OR");
 game.contestant("Nowaleya");
 
 game.eliminate("Tindra");

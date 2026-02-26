@@ -1,11 +1,6 @@
-import { Game } from "../../../library/game.js";
+import { Robinson } from "../index.js";
 
-const game = new Game(
-  { name: "Robinson", year: 2024, version: 2, versionTitle: "Höst" },
-  ["robinson", "rounded"],
-  ["🌴", "🥥", "🔥"],
-  false,
-);
+const game = new Robinson(2024, 2, "Höst");
 
 game.contestant("Maxim").bet("AR", false).eliminate();
 game.contestant("Amanda R").eliminate();

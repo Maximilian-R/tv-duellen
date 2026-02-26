@@ -1,11 +1,7 @@
-import { Game } from "../../../library/game.js";
+import { Farmen } from "../index.js";
 
-const game = new Game(
-  { name: "Farmen", year: 2025 },
-  ["farmen"],
-  ["🥕", "🌽", "🥔"],
-  false,
-);
+const game = new Farmen(2025);
+
 game.contestant("Jonna").quit();
 game.contestant("Sofia").bet("AR", false).bet("OR").eliminate();
 game.contestant("Alida").bet("OR", false).eliminate();

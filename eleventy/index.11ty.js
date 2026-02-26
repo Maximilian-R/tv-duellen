@@ -54,7 +54,11 @@ export default {
                 <span>LIVE JUST NU:</span>
                 <span>
                   ${livePrograms
-                    .map((program) => program.data.game.meta.name)
+                    .map(
+                      (program) =>
+                        program.data.game.meta.short ??
+                        program.data.game.meta.name,
+                    )
                     .join(" ")}
                 </span>
               </div>

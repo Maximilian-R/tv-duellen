@@ -1,15 +1,7 @@
-import { Game } from "../../../library/game.js";
+import { Melodifestivalen } from "../index.js";
 
-const game = new Game(
-  {
-    name: "Melodifestivalen",
-    year: 2025,
-    title: "Melodi&shy;festivalen",
-    short: "Mello",
-  },
-  ["melodifestivalen", "rounded", "theme-white"],
-  ["🪩", "🎈", "🎤"]
-);
+const game = new Melodifestivalen(2025);
+
 game.contestant("Annika Wickihalder").bet("RS").bet("EMS").eliminate(8);
 game.contestant("Dolly Style").eliminate(5);
 game.contestant("Erik Segerstedt").bet("OR", false).eliminate(9);

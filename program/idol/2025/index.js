@@ -1,10 +1,7 @@
-import { Game } from "../../../library/game.js";
+import { Idol } from "../index.js";
 
-const game = new Game(
-  { name: "Idol", year: 2025 },
-  ["idol", "rounded", "theme-white"],
-  ["🎙️", "✨", "🎶"]
-);
+const game = new Idol(2025);
+
 game.contestant("Allan");
 game.contestant("Alma");
 game.contestant("Arvid");

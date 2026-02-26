@@ -1,15 +1,7 @@
-import { Game } from "../../../library/game.js";
+import { Melodifestivalen } from "../index.js";
 
-const game = new Game(
-  {
-    name: "Melodifestivalen",
-    year: 2026,
-    title: "Melodi&shy;festivalen",
-    short: "Mello",
-  },
-  ["melodifestivalen", "rounded", "theme-white"],
-  ["🪩", "🎈", "🎤"],
-);
+const game = new Melodifestivalen(2026);
+
 game.contestant("Greczula");
 game.contestant("A-teens");
 game.contestant("Felicia");

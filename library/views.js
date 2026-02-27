@@ -81,11 +81,16 @@ export function createEmojis(emojis, small = false, column = false) {
   </div>`;
 }
 
-export function createMain({ contestants, emojis, displayPosition }) {
+export function createMain({
+  contestants,
+  emojis,
+  displayPosition,
+  fallbackImage,
+}) {
   return html`<main>
     <ul>
       ${contestants.map((contestant) =>
-        createContestant(contestant, displayPosition),
+        createContestant(contestant, displayPosition, fallbackImage),
       )}
     </ul>
     ${createEmojis(emojis)}
@@ -95,6 +100,7 @@ export function createMain({ contestants, emojis, displayPosition }) {
 export function createContestant(
   { img, name, votes, state, position, role, reason },
   displayPosition,
+  fallbackImage,
 ) {
   return html`<li data-dialog-trigger>
     <picture
@@ -103,7 +109,11 @@ export function createContestant(
       position=${displayPosition && Number.isFinite(position)
         ? position
         : nothing}
-      ><img src="./images/${img}" onerror="replaceImage(this)"
+      ><img
+        src="./images/${img}"
+        onerror="replaceImage(this, ${fallbackImage
+          ? `"../images/${fallbackImage}"`
+          : null})"
     /></picture>
     <span>${name}</span>
     ${createVotes(votes)} ${createRole(role)}

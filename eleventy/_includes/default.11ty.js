@@ -17,10 +17,14 @@ export default async ({ title, themes, content }) => {
         <script src="../../../library/animation.js" type="module"></script>
         <script src="../../../library/dialog.js" type="module"></script>
         <script>
-          window.replaceImage = function (img) {
-            const replacement = document.createElement("div");
-            replacement.className = "img error";
-            img.replaceWith(replacement);
+          window.replaceImage = function (img, src) {
+            if (src) {
+              img.src = src;
+            } else {
+              const replacement = document.createElement("div");
+              replacement.className = "img error";
+              img.replaceWith(replacement);
+            }
           };
         </script>
         <title>${title}</title>

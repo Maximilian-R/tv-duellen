@@ -1,11 +1,6 @@
 import { Forradarna } from "../index.js";
 
-const game = new Forradarna(
-  { name: "Förrädarna", year: 2025 },
-  ["förrädarna", "theme-white"],
-  ["🎭", "🗡️", "🩸"],
-  false,
-);
+const game = new Forradarna(2025);
 
 const traitor = "🎭";
 

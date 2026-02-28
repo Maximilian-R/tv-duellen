@@ -10,9 +10,9 @@ game.contestant("Medina");
 game.contestant("Saga");
 game.contestant("Smash Into Pieces");
 game.contestant("Cimberly");
-game.contestant("");
-game.contestant("");
-game.contestant("");
-game.contestant("");
+game.contestant("Lilla Al Fadji");
+game.contestant("Sanna Nielsen");
+game.contestant("Meira Omar");
+game.contestant("Robin Bengtsson");
 
 export { game };

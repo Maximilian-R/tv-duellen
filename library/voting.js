@@ -45,7 +45,7 @@ async function start() {
   const primaryVotesDB = votes.filter((vote) => vote.primary);
   const secondaryVotesDB = votes.filter((vote) => !vote.primary);
 
-  const primaryVotes = [...Array(meta.primary)].map((index) => {
+  const primaryVotes = [...Array(meta.primary).keys()].map((index) => {
     const voteDB = primaryVotesDB?.[index];
     return {
       name: user.id,
@@ -55,7 +55,7 @@ async function start() {
     };
   });
 
-  const secondaryVotes = [...Array(meta.secondary)].map((index) => {
+  const secondaryVotes = [...Array(meta.secondary).keys()].map((index) => {
     const voteDB = secondaryVotesDB?.[index];
     return {
       name: user.id,

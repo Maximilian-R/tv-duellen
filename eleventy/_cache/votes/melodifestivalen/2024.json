@@ -1,0 +1,162 @@
+[
+  {
+    "id": 102,
+    "user": "AR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Marcus & Martinus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 103,
+    "user": "JR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Marcus & Martinus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 104,
+    "user": "LR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Marcus & Martinus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 105,
+    "user": "OR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Marcus & Martinus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 106,
+    "user": "MR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Medina",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 107,
+    "user": "AMS",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Smash Into Pieces",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 108,
+    "user": "AR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Danny Saucedo",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 109,
+    "user": "LR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Danny Saucedo",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 110,
+    "user": "EMS",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Annika Wickihalder",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 111,
+    "user": "MR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Annika Wickihalder",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 112,
+    "user": "RS",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Annika Wickihalder",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 113,
+    "user": "OR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Jacqline",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 114,
+    "user": "JR",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Jacqline",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 115,
+    "user": "AMS",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Jay Smith",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 116,
+    "user": "EMS",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Jay Smith",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 117,
+    "user": "RS",
+    "game": "Melodifestivalen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Jay Smith",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  }
+]

@@ -1,9 +1,9 @@
 import { Game } from "../../library/game.js";
 
 export class Idol extends Game {
-  constructor(year) {
+  constructor(year, secondaryVotes) {
     super(
-      { name: "Idol", year },
+      { name: "Idol", year, secondaryVotes },
       ["idol", "rounded", "theme-white"],
       ["🎙️", "✨", "🎶"],
       false,

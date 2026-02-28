@@ -19,4 +19,6 @@ game.contestant("Niklas").bet("AR").bet("JR", false).eliminate();
 game.contestant("Graham").quit();
 game.contestant("Nathalie").quit();
 
+game.lock();
+
 export { game };

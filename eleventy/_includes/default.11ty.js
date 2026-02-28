@@ -1,10 +1,26 @@
 import { html } from "@lit-labs/ssr";
 import { renderToString } from "../../library/views.js";
 
-export default async ({ title, themes, content }) => {
+export default async ({
+  title,
+  themes,
+  content,
+  metaGame,
+  metaYear,
+  metaVersion,
+  metaLocked,
+  metaPrimary,
+  metaSecondary,
+}) => {
   const template = html`<!DOCTYPE html>
     <html lang="sv-SE">
       <head>
+        <meta name="game" content="${metaGame}" />
+        <meta name="year" content="${metaYear}" />
+        <meta name="version" content="${metaVersion}" />
+        <meta name="locked" content="${metaLocked}" />
+        <meta name="primary" content="${metaPrimary}" />
+        <meta name="secondary" content="${metaSecondary}" />
         <meta name="robots" content="noindex" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +32,7 @@ export default async ({ title, themes, content }) => {
         />
         <script src="../../../library/animation.js" type="module"></script>
         <script src="../../../library/dialog.js" type="module"></script>
+        <script src="../../../library/voting.js" type="module"></script>
         <script>
           window.replaceImage = function (img, src) {
             if (src) {

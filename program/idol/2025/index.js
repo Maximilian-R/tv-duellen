@@ -1,6 +1,6 @@
 import { Idol } from "../index.js";
 
-const game = new Idol(2025);
+const game = new Idol(2025, 0);
 
 game.contestant("Allan");
 game.contestant("Alma");
@@ -28,5 +28,7 @@ game.eliminate("Jonas", "Ingrid");
 game.eliminate("Nicolina");
 game.eliminate("Love S");
 game.win("Tuva");
+
+game.lock();
 
 export { game };

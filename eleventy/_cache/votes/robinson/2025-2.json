@@ -1,0 +1,102 @@
+[
+  {
+    "id": 92,
+    "user": "AR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": true,
+    "contestant": "Matteo",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 93,
+    "user": "JR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": true,
+    "contestant": "Matteo",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 94,
+    "user": "OR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": true,
+    "contestant": "Matteo",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 95,
+    "user": "RS",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": true,
+    "contestant": "Matteo",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 96,
+    "user": "MR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": true,
+    "contestant": "Samuel",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 97,
+    "user": "AR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": false,
+    "contestant": "Samuel",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 98,
+    "user": "MR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": false,
+    "contestant": "Akink",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 99,
+    "user": "RS",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": false,
+    "contestant": "Akink",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 100,
+    "user": "JR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": false,
+    "contestant": "Per",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 101,
+    "user": "OR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 2,
+    "primary": false,
+    "contestant": "Per",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  }
+]

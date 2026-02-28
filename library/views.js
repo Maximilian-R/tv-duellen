@@ -102,7 +102,7 @@ export function createContestant(
   displayPosition,
   fallbackImage,
 ) {
-  return html`<li data-dialog-trigger>
+  return html`<li data-dialog-trigger data-name="${name}">
     <picture
       state=${getPlayerStateLabel(state) ?? nothing}
       reason=${reason ?? nothing}

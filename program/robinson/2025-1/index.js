@@ -32,4 +32,6 @@ game.contestant("Fabian").quit();
 game.contestant("Sophie").bet("AR").bet("JR").bet("OR").eliminate();
 game.contestant("Pontus").bet("OR", false).eliminate(2);
 
+game.lock();
+
 export { game };

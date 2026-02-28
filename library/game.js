@@ -1,3 +1,8 @@
+import slugify from "@sindresorhus/slugify";
+import { CACHE_DIR } from "./constants.js";
+import fs from "fs";
+import path from "path";
+
 const PLAYER_STATE = {
   WINNER: -1,
   PLAYING: 0,
@@ -74,14 +79,56 @@ export class Game {
     displayPosition = true,
     fallbackImage = null,
   ) {
-    if (!meta.version) meta.version = 1;
-    this.meta = meta;
+    this.meta = {
+      version: 1,
+      primaryVotes: 1,
+      secondaryVotes: 1,
+      ...meta,
+    };
     this.emojis = emojis;
     this.contestants = [];
     this.defaultImageFormat = ".webp";
     this.fallbackImage = fallbackImage;
     this.theme = theme;
     this.displayPosition = displayPosition;
+    this.locked = false;
+  }
+
+  loadVotes() {
+    const filePath = path.join(CACHE_DIR, `${this.slugPath()}.json`);
+
+    if (!fs.existsSync(filePath)) {
+      console.warn(`Filepath ${filePath} does not exist.`);
+      return;
+    }
+
+    const fileContents = fs.readFileSync(filePath, "utf-8");
+    const votes = JSON.parse(fileContents);
+
+    votes.forEach((vote) => {
+      const contestant = this.contestants.find(
+        (c) => c.name === vote.contestant,
+      );
+      contestant?.vote(vote.user, vote.primary);
+    });
+  }
+
+  slugName() {
+    const name = slugify(this.meta.name, {
+      customReplacements: [
+        ["ö", "o"],
+        ["ä", "a"],
+        ["å", "a"],
+      ],
+    });
+    return name;
+  }
+
+  slugPath() {
+    const version =
+      this.meta.year +
+      (this.meta.versionPath ? `-${this.meta.versionPath}` : "");
+    return `${this.slugName()}/${version}`;
   }
 
   contestant(name, role) {
@@ -95,6 +142,11 @@ export class Game {
   win(name) {
     const winner = this.contestants.find((c) => c.name === name);
     winner.win();
+  }
+
+  lock() {
+    this.locked = true;
+    this.loadVotes();
   }
 
   eliminate(...names) {
@@ -158,8 +210,13 @@ class Contestant {
     return this;
   }
 
-  bet(name, primary = true) {
+  vote(name, primary = true) {
     this._votes.push({ name, primary });
+    return this;
+  }
+
+  bet(name, primary = true) {
+    // this._votes.push({ name, primary });
     return this;
   }
 
@@ -194,4 +251,24 @@ class Contestant {
   get secondaryVotes() {
     return this.votes.filter((vote) => !vote.primary).length;
   }
+}
+
+function votesToCSV(votes) {
+  const headers = ["user", "game", "year", "version", "primary", "contestant"];
+
+  const rows = votes.map((vote) => [
+    vote.user,
+    vote.game,
+    vote.year,
+    vote.version,
+    vote.primary,
+    vote.contestant,
+  ]);
+
+  const csvContent = [
+    headers.join(","),
+    ...rows.map((row) => row.join(",")),
+  ].join("\n");
+
+  return csvContent;
 }

@@ -26,4 +26,6 @@ game.contestant("Fredrik").quit();
 game.contestant("Gustav").eliminate();
 game.contestant("Alexander").eliminate().bet("JR");
 
+game.lock();
+
 export { game };

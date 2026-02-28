@@ -27,4 +27,6 @@ game.contestant("Alessia").eliminate();
 game.contestant("Desirée N").quit();
 game.contestant("Per E").quit();
 
+game.lock();
+
 export { game };

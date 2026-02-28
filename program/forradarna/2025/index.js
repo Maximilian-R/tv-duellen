@@ -51,4 +51,6 @@ game.eliminate("Matilda");
 game.eliminate("Cleo", "Marcus", "Tom");
 game.win("Ahmed");
 
+game.lock();
+
 export { game };

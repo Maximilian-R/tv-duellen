@@ -27,4 +27,6 @@ game
   .bet("RS");
 game.contestant("Tilda").eliminate(7).bet("MR", false);
 
+game.lock();
+
 export { game };

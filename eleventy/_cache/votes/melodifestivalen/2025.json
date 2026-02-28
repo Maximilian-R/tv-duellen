@@ -1,0 +1,202 @@
+[
+  {
+    "id": 118,
+    "user": "AMS",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 119,
+    "user": "ARL",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 120,
+    "user": "ER",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 121,
+    "user": "AR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 122,
+    "user": "FL",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 123,
+    "user": "JR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 124,
+    "user": "RS",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Kaj",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 125,
+    "user": "FL",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Måns Zelmerlöw",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 126,
+    "user": "EMS",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Måns Zelmerlöw",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 127,
+    "user": "AR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Greczula",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 128,
+    "user": "LR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Greczula",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 129,
+    "user": "MR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Greczula",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 130,
+    "user": "OR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Greczula",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 131,
+    "user": "AMS",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Greczula",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 132,
+    "user": "ER",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Klara Hammarström",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 133,
+    "user": "MR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Scarlet",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 134,
+    "user": "EMS",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Annika Wickihalder",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 135,
+    "user": "RS",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Annika Wickihalder",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 136,
+    "user": "OR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Erik Segerstedt",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 137,
+    "user": "JR",
+    "game": "Melodifestivalen",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Meira Omar",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  }
+]

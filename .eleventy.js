@@ -5,6 +5,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("program/**/*.webp");
   eleventyConfig.addPassthroughCopy("library/animation.js");
   eleventyConfig.addPassthroughCopy("library/dialog.js");
+  eleventyConfig.addPassthroughCopy("library/voting.js");
 
   eleventyConfig.setOutputDirectory("dist");
   eleventyConfig.setInputDirectory("eleventy");

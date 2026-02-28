@@ -31,4 +31,6 @@ game
   .win();
 game.contestant("Medina").bet("MR", false).eliminate(2);
 
+game.lock();
+
 export { game };

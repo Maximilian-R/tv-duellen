@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "user": "AR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Cimberly",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 2,
+    "user": "JR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Cimberly",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 3,
+    "user": "ER",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Cimberly",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 4,
+    "user": "RS",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Cimberly",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 5,
+    "user": "MR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Saga",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 6,
+    "user": "AR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Saga",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 7,
+    "user": "FL",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Simon",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 8,
+    "user": "LR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Simon",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 9,
+    "user": "RS",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Simon",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 10,
+    "user": "JR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Simon",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 11,
+    "user": "OR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Jordan",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 12,
+    "user": "JR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Jordan",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 13,
+    "user": "MR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Tilda",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 14,
+    "user": "AR",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": false,
+    "contestant": "Olivia",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 15,
+    "user": "ER",
+    "game": "Idol",
+    "year": 2023,
+    "version": 1,
+    "primary": true,
+    "contestant": "Isak",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  }
+]

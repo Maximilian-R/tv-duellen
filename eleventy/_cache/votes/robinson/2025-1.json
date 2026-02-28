@@ -1,0 +1,102 @@
+[
+  {
+    "id": 82,
+    "user": "MR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Aron",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 83,
+    "user": "OR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Pontus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 84,
+    "user": "AR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Sophie",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 85,
+    "user": "JR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Sophie",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 86,
+    "user": "OR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Sophie",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 87,
+    "user": "MR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "Pål",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 88,
+    "user": "AR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Pål",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 89,
+    "user": "RS",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Pål",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 90,
+    "user": "RS",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": true,
+    "contestant": "David",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 91,
+    "user": "JR",
+    "game": "Robinson",
+    "year": 2025,
+    "version": 1,
+    "primary": false,
+    "contestant": "Christoffer",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  }
+]

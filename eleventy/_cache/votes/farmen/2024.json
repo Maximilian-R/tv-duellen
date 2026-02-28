@@ -1,0 +1,102 @@
+[
+  {
+    "id": 32,
+    "user": "RS",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Tim",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 33,
+    "user": "AR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Maxine",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 34,
+    "user": "OR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Maxine",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 35,
+    "user": "JR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Ciro",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 36,
+    "user": "MR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": true,
+    "contestant": "Desirée S",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 37,
+    "user": "JR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Magnus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 38,
+    "user": "MR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Magnus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 39,
+    "user": "OR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Magnus",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 40,
+    "user": "AR",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Cornelia G",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  },
+  {
+    "id": 41,
+    "user": "RS",
+    "game": "Farmen",
+    "year": 2024,
+    "version": 1,
+    "primary": false,
+    "contestant": "Jennifer",
+    "created_at": "2026-02-28T09:24:44.664745+00:00"
+  }
+]

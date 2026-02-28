@@ -29,4 +29,6 @@ game.contestant("Chris").eliminate();
 game.contestant("Tove").bet("MR", false).eliminate();
 game.contestant("Patrik").eliminate();
 
+game.lock();
+
 export { game };

@@ -31,4 +31,6 @@ game.contestant("Måns Zelmerlöw").bet("FL").bet("EMS", false).eliminate(2);
 game.contestant("Saga Ludvigsson").eliminate(12);
 game.contestant("Scarlet").bet("MR", false).eliminate(7);
 
+game.lock();
+
 export { game };

@@ -32,4 +32,6 @@ game.contestant("Ulf").eliminate();
 game.contestant("Lea").eliminate();
 game.contestant("Per").secondary("JR").secondary("OR").eliminate();
 
+game.lock();
+
 export { game };

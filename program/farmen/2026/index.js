@@ -36,4 +36,6 @@ game.eliminate("Kevin");
 game.eliminate("Nowaleya");
 // game.eliminate("Angelica");
 
+game.lock();
+
 export { game };

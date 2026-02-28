@@ -1,11 +1,14 @@
 {
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "sync": "node library/fetch-votes.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@lit-labs/ssr": "^4.0.0",
+    "@supabase/supabase-js": "^2.98.0",
+    "dotenv": "^17.3.1",
     "lit-html": "^3.3.2",
     "sharp": "^0.34.5"
   },

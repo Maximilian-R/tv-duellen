@@ -27,6 +27,24 @@ export default {
           game.meta.versionPath ? " " + game.meta.versionTitle : ""
         }`,
       themes: ({ game }) => game.theme,
+      metaGame: ({ game }) => {
+        return game.meta.name;
+      },
+      metaYear: ({ game }) => {
+        return game.meta.year;
+      },
+      metaVersion: ({ game }) => {
+        return game.meta.version;
+      },
+      metaLocked: ({ game }) => {
+        return game.locked;
+      },
+      metaPrimary: ({ game }) => {
+        return game.meta.primaryVotes;
+      },
+      metaSecondary: ({ game }) => {
+        return game.meta.secondaryVotes;
+      },
     },
   },
   render: (data) => {

@@ -193,3 +193,26 @@
   background-color: rgb(146, 199, 96);
   --index: 11;
 }
+
+#floating-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  background: #ffffff59;
+  padding: 0.5em;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.draggable-box {
+  --vote-size: 3rem;
+}
+
+.snap-hover img {
+  outline: var(--text-color) dashed 3px;
+  outline-offset: 3px;
+}

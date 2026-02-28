@@ -154,3 +154,7 @@
       0px 7px 10px #fffffff2;
   }
 }
+
+* {
+  user-select: none;
+}

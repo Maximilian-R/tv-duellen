@@ -74,6 +74,7 @@ export class Game {
     displayPosition = true,
     fallbackImage = null,
   ) {
+    if (!meta.version) meta.version = 1;
     this.meta = meta;
     this.emojis = emojis;
     this.contestants = [];

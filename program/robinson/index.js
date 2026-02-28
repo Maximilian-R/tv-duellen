@@ -8,6 +8,7 @@ export class Robinson extends Game {
         year: year,
         version: version,
         versionTitle: versionTitle,
+        versionPath: version,
       },
       ["robinson", "rounded"],
       ["🌴", "🥥", "🔥"],

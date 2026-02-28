@@ -84,7 +84,7 @@ export default {
                               ? ""
                               : nothing}
                             >${program.data.game.meta.year}${program.data.game
-                              .meta.version
+                              .meta.versionPath
                               ? " " + program.data.game.meta.versionTitle
                               : ""}</a
                           >

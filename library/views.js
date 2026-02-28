@@ -62,7 +62,7 @@ export function createHeader({ meta, emojis }) {
     <header>
       <a class="home" href="../../../">Tillbaka</a>
       <h1 class="neon-sign">${unsafeHTML(meta.title ?? meta.name)}</h1>
-      <h2>${meta.year}${meta.version ? " " + meta.versionTitle : ""}</h2>
+      <h2>${meta.year}${meta.versionPath ? " " + meta.versionTitle : ""}</h2>
       ${createEmojis(emojis)}
     </header>
   `;

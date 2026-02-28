@@ -19,12 +19,12 @@ export default {
           ["å", "a"],
         ],
       })}/${game.meta.year}${
-        game.meta.version ? "-" + game.meta.version : ""
+        game.meta.versionPath ? "-" + game.meta.versionPath : ""
       }/index.html`,
     eleventyComputed: {
       title: ({ game }) =>
         `${game.meta.short ?? game.meta.name} ${game.meta.year}${
-          game.meta.version ? " " + game.meta.versionTitle : ""
+          game.meta.versionPath ? " " + game.meta.versionTitle : ""
         }`,
       themes: ({ game }) => game.theme,
     },

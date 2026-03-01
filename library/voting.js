@@ -66,7 +66,7 @@ async function start() {
   });
 
   createFloatingVotes([...primaryVotes, ...secondaryVotes]);
-  const vibrate = createVibrate();
+  createVibrate();
 
   function setupDrag() {
     const draggables = document.querySelectorAll(".draggable-box");
@@ -76,7 +76,9 @@ async function start() {
     let offsetY = 0;
     let snapTarget = null;
 
-    document.addEventListener("touchend", vibrate);
+    document.addEventListener("touchend", () =>
+      document.querySelector("label").click(),
+    );
 
     draggables.forEach((box) => {
       box.addEventListener("mousedown", startDrag);
@@ -307,8 +309,4 @@ function createVibrate() {
   label.htmlFor = "haptic-switch";
   label.style.display = "none";
   document.body.appendChild(label);
-
-  return () => {
-    document.querySelector("label").click();
-  };
 }

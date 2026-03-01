@@ -137,7 +137,7 @@ async function start() {
       activeDrag.style.top = top + "px";
     }
 
-    async function endDrag() {
+    function endDrag() {
       if (!activeDrag) return;
 
       document.removeEventListener("mousemove", dragMove);
@@ -151,17 +151,14 @@ async function start() {
         snapTarget.classList.remove("snap-hover");
 
         if (snapTarget.dataset.name !== activeDrag.dataset.contestant) {
-          const data = await submitVote(
+          submitVote(
             user.id,
             meta,
             snapTarget.dataset.name,
             activeDrag.dataset.primary === "true",
             activeDrag.dataset.id,
+            activeDrag,
           );
-          if (data) {
-            activeDrag.dataset.id = data[0].id;
-            activeDrag.dataset.contestant = snapTarget.dataset.name;
-          }
         }
       } else {
         if (activeDrag.dataset.contestant) {
@@ -234,7 +231,14 @@ async function getUserVotes(user, meta) {
   return data;
 }
 
-async function submitVote(user, meta, contestant, primary, id = undefined) {
+async function submitVote(
+  user,
+  meta,
+  contestant,
+  primary,
+  id = undefined,
+  element = undefined,
+) {
   const obj = {
     game: meta.game,
     year: meta.year,
@@ -247,6 +251,10 @@ async function submitVote(user, meta, contestant, primary, id = undefined) {
   const { data, error } = await db.from("Votes").upsert(obj).select();
   if (error) {
     console.error(error);
+  }
+  if (data) {
+    element.dataset.id = data[0].id;
+    element.dataset.contestant = contestant;
   }
   return data;
 }
@@ -299,16 +307,15 @@ function createVibrate() {
   input.type = "checkbox";
   input.id = "haptic-switch";
   input.setAttribute("switch", "");
-  // input.style.display = "none";
+  input.style.display = "none";
   document.body.appendChild(input);
 
   const label = document.createElement("label");
   label.htmlFor = "haptic-switch";
-  // label.style.display = "none";
+  label.style.display = "none";
   document.body.appendChild(label);
 
   return () => {
-    console.log(label, input);
     label.click();
   };
 }

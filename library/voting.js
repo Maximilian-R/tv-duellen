@@ -299,15 +299,16 @@ function createVibrate() {
   input.type = "checkbox";
   input.id = "haptic-switch";
   input.setAttribute("switch", "");
-  input.style.display = "none";
+  // input.style.display = "none";
   document.body.appendChild(input);
 
   const label = document.createElement("label");
   label.htmlFor = "haptic-switch";
-  label.style.display = "none";
+  // label.style.display = "none";
   document.body.appendChild(label);
 
   return () => {
+    console.log(label, input);
     label.click();
   };
 }

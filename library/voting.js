@@ -66,6 +66,7 @@ async function start() {
   });
 
   createFloatingVotes([...primaryVotes, ...secondaryVotes]);
+  const vibrate = createVibrate();
 
   function setupDrag() {
     const draggables = document.querySelectorAll(".draggable-box");
@@ -146,6 +147,7 @@ async function start() {
 
       if (snapTarget) {
         snapToTarget(activeDrag, snapTarget);
+        vibrate();
         snapTarget.classList.remove("snap-hover");
 
         if (snapTarget.dataset.name !== activeDrag.dataset.contestant) {
@@ -290,4 +292,22 @@ function createFloatingVotes(votes) {
       container.appendChild(child);
     }
   });
+}
+
+function createVibrate() {
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.id = "haptic-switch";
+  input.setAttribute("switch", "");
+  input.style.display = "none";
+  document.body.appendChild(input);
+
+  const label = document.createElement("label");
+  label.htmlFor = "haptic-switch";
+  label.style.display = "none";
+  document.body.appendChild(label);
+
+  return () => {
+    label.click();
+  };
 }

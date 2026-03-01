@@ -309,6 +309,6 @@ function createVibrate() {
   document.body.appendChild(label);
 
   return () => {
-    label.click();
+    document.querySelector("label").click();
   };
 }

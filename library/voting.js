@@ -151,7 +151,7 @@ function setupDraggables() {
   const targets = document.querySelectorAll("li[data-contestant]");
   let activeDrag = null;
   let snapTarget = null;
-  let offsetX = document.body.getBoundingClientRect().left;
+  let offsetX = 0;
 
   draggables.forEach((vote) => {
     vote.addEventListener("mousedown", startDrag);
@@ -160,6 +160,7 @@ function setupDraggables() {
 
   function startDrag(e) {
     e.preventDefault();
+    offsetX = document.body.getBoundingClientRect().left;
 
     const vote = e.target;
     if (vote.classList.contains("saving")) {

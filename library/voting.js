@@ -37,13 +37,17 @@ async function start() {
     return;
   }
 
-  const votesDB = await getUserVotes(user.id, meta);
-  const primaryVotes = createVotes(user.id, true, meta.primary, votesDB);
-  const secondaryVotes = createVotes(user.id, false, meta.secondary, votesDB);
+  try {
+    const votesDB = await getUserVotes(user.id, meta);
+    const primaryVotes = createVotes(user.id, true, meta.primary, votesDB);
+    const secondaryVotes = createVotes(user.id, false, meta.secondary, votesDB);
 
-  createDraggableVotes([...primaryVotes, ...secondaryVotes]);
+    createDraggableVotes([...primaryVotes, ...secondaryVotes]);
 
-  setupDraggables();
+    setupDraggables();
+  } catch (error) {
+    console.error("Error setting up voting:", error);
+  }
 }
 
 async function getUser(id) {
@@ -63,6 +67,7 @@ async function getUserVotes(user, meta) {
     .eq("version", meta.version)
     .eq("user", user);
   if (error) {
+    throw error;
     console.error(error);
   }
   return data;

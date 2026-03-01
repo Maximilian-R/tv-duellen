@@ -100,8 +100,8 @@ function snapToContestant(vote, contestant) {
 
   vote.style.zIndex = 1000;
   vote.style.position = "absolute";
-  vote.style.left = `calc(50% - ${vote.offsetWidth / 2}px)`;
-  vote.style.top = `calc(50% - ${vote.offsetHeight / 2}px)`;
+  vote.style.left = `1rem`;
+  vote.style.top = `1rem`;
 }
 
 function createVotes(user, primary, amount, votesDB) {
@@ -150,9 +150,8 @@ function setupDraggables() {
   const draggables = document.querySelectorAll(".draggable");
   const targets = document.querySelectorAll("li[data-contestant]");
   let activeDrag = null;
-  let offsetX = 0;
-  let offsetY = 0;
   let snapTarget = null;
+  let offsetX = document.body.getBoundingClientRect().left;
 
   draggables.forEach((vote) => {
     vote.addEventListener("mousedown", startDrag);
@@ -171,10 +170,6 @@ function setupDraggables() {
 
     let clientX = e.type === "mousedown" ? e.clientX : e.touches[0].clientX;
     let clientY = e.type === "mousedown" ? e.clientY : e.touches[0].clientY;
-
-    const rect = activeDrag.getBoundingClientRect();
-    offsetX = clientX - rect.left;
-    offsetY = clientY - rect.top;
 
     document.body.appendChild(activeDrag);
     activeDrag.style.position = "absolute";
@@ -199,13 +194,16 @@ function setupDraggables() {
   }
 
   function moveAt(clientX, clientY) {
+    clientX -= offsetX;
+
     const scrollX = window.scrollX;
     const scrollY = window.scrollY;
 
     const maxX = document.body.scrollWidth - activeDrag.offsetWidth;
     const maxY = document.body.scrollHeight - activeDrag.offsetHeight;
-    let left = clientX - offsetX + scrollX;
-    let top = clientY - offsetY + scrollY;
+
+    let left = clientX - activeDrag.offsetWidth / 2 + scrollX;
+    let top = clientY - activeDrag.offsetHeight / 2 + scrollY;
 
     left = Math.max(0, Math.min(left, maxX));
     top = Math.max(0, Math.min(top, maxY));

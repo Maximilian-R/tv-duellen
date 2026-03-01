@@ -110,15 +110,6 @@
   }
 }
 
-.vote[data-primary="false"] {
-  background: #282828 !important;
-  color: white;
-}
-
-.vote[data-more] {
-  background-color: #282828;
-}
-
 .vote {
   --color-h: calc(360 / 11);
   --color-s: 80%;
@@ -132,65 +123,75 @@
     hsl(calc(var(--color-h) * var(--index) + 20) var(--color-s) var(--color-l))
   ); */
   color: white;
+  background-color: var(--vote-color);
+}
+
+.vote[data-primary="false"] {
+  --vote-color: rgb(40, 40, 40) !important;
+  color: white;
+}
+
+.vote[data-more] {
+  --vote-color: rgb(40, 40, 40);
 }
 
 .vote[data-name="AR"] {
-  background-color: rgb(8, 170, 210);
+  --vote-color: rgb(8, 170, 210);
   --index: 0;
 }
 
 .vote[data-name="ER"] {
-  background-color: rgb(219, 219, 29);
+  --vote-color: rgb(219, 219, 29);
   --index: 1;
 }
 
 .vote[data-name="FL"] {
-  background-color: rgb(34, 59, 248);
+  --vote-color: rgb(34, 59, 248);
   --index: 2;
 }
 
 .vote[data-name="JR"] {
-  background-color: rgb(151, 28, 233);
+  --vote-color: rgb(151, 28, 233);
   --index: 3;
 }
 
 .vote[data-name="LR"] {
-  background-color: rgb(248, 155, 34);
+  --vote-color: rgb(248, 155, 34);
   --index: 4;
 }
 
 .vote[data-name="MR"] {
-  background-color: rgb(202, 7, 121);
+  --vote-color: rgb(202, 7, 121);
   --index: 5;
 }
 
 .vote[data-name="RS"] {
-  background-color: rgb(31, 194, 31);
+  --vote-color: rgb(31, 194, 31);
   --index: 6;
 }
 
 .vote[data-name="OR"] {
-  background-color: rgb(232, 49, 49);
+  --vote-color: rgb(232, 49, 49);
   --index: 7;
 }
 
 .vote[data-name="GUEST"] {
-  background-color: rgb(240, 126, 126);
+  --vote-color: rgb(240, 126, 126);
   --index: 8;
 }
 
 .vote[data-name="AMS"] {
-  background-color: rgb(242, 110, 52);
+  --vote-color: rgb(242, 110, 52);
   --index: 9;
 }
 
 .vote[data-name="EMS"] {
-  background-color: rgb(160, 174, 242);
+  --vote-color: rgb(160, 174, 242);
   --index: 10;
 }
 
 .vote[data-name="ARL"] {
-  background-color: rgb(146, 199, 96);
+  --vote-color: rgb(146, 199, 96);
   --index: 11;
 }
 
@@ -215,4 +216,23 @@
 .snap-hover img {
   outline: var(--text-color) dashed 3px;
   outline-offset: 3px;
+}
+
+.draggable-box.saving {
+  animation: savingAnimation 1s ease-in-out infinite;
+}
+
+@keyframes savingAnimation {
+  0% {
+    transform: scale(1);
+    background-color: var(--vote-color);
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: color-mix(in srgb, var(--vote-color) 50%, transparent);
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--vote-color);
+  }
 }

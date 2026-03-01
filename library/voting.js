@@ -83,6 +83,10 @@ async function start() {
     function startDrag(e) {
       e.preventDefault();
 
+      if (e.target.classList.contains("saving")) {
+        return;
+      }
+
       activeDrag = e.target;
       let clientX = e.type === "mousedown" ? e.clientX : e.touches[0].clientX;
       let clientY = e.type === "mousedown" ? e.clientY : e.touches[0].clientY;
@@ -149,6 +153,8 @@ async function start() {
         snapTarget.classList.remove("snap-hover");
 
         if (snapTarget.dataset.name !== activeDrag.dataset.contestant) {
+          activeDrag.classList.add("saving");
+
           const data = await submitVote(
             user.id,
             meta,
@@ -156,9 +162,25 @@ async function start() {
             activeDrag.dataset.primary === "true",
             activeDrag.dataset.id,
           );
+          activeDrag.classList.remove("saving");
+
           if (data) {
             activeDrag.dataset.id = data[0].id;
             activeDrag.dataset.contestant = snapTarget.dataset.name;
+          } else {
+            if (activeDrag.dataset.contestant) {
+              const targetElement = document.querySelector(
+                `li[data-name="${activeDrag.dataset.contestant}"]`,
+              );
+              snapToTarget(activeDrag, targetElement);
+            } else {
+              document
+                .getElementById("floating-container")
+                .appendChild(activeDrag);
+              activeDrag.style.position = "relative";
+              activeDrag.style.left = "0";
+              activeDrag.style.top = "0";
+            }
           }
         }
       } else {
@@ -245,18 +267,18 @@ async function submitVote(user, meta, contestant, primary, id = undefined) {
   const { data, error } = await db.from("Votes").upsert(obj).select();
   if (error) {
     console.error(error);
+    return null;
   }
   return data;
 }
 
 function snapToTarget(drag, target) {
   target.appendChild(drag);
-  const targetRect = target.getBoundingClientRect();
 
   drag.style.zIndex = 1000;
   drag.style.position = "absolute";
-  drag.style.left = targetRect.width / 2 - drag.offsetWidth / 2 + "px";
-  drag.style.top = targetRect.height / 2 - drag.offsetHeight + "px";
+  drag.style.left = `calc(50% - ${drag.offsetWidth / 2}px)`;
+  drag.style.top = `calc(50% - ${drag.offsetHeight / 2}px)`;
 }
 
 function createFloatingVotes(votes) {

@@ -76,6 +76,8 @@ async function start() {
     let offsetY = 0;
     let snapTarget = null;
 
+    document.addEventListener("touchend", vibrate);
+
     draggables.forEach((box) => {
       box.addEventListener("mousedown", startDrag);
       box.addEventListener("touchstart", startDrag, { passive: false });
@@ -137,7 +139,7 @@ async function start() {
       activeDrag.style.top = top + "px";
     }
 
-    function endDrag() {
+    async function endDrag() {
       if (!activeDrag) return;
 
       document.removeEventListener("mousemove", dragMove);
@@ -147,18 +149,20 @@ async function start() {
 
       if (snapTarget) {
         snapToTarget(activeDrag, snapTarget);
-        vibrate();
         snapTarget.classList.remove("snap-hover");
 
         if (snapTarget.dataset.name !== activeDrag.dataset.contestant) {
-          submitVote(
+          const data = await submitVote(
             user.id,
             meta,
             snapTarget.dataset.name,
             activeDrag.dataset.primary === "true",
             activeDrag.dataset.id,
-            activeDrag,
           );
+          if (data) {
+            activeDrag.dataset.id = data[0].id;
+            activeDrag.dataset.contestant = snapTarget.dataset.name;
+          }
         }
       } else {
         if (activeDrag.dataset.contestant) {
@@ -231,14 +235,7 @@ async function getUserVotes(user, meta) {
   return data;
 }
 
-async function submitVote(
-  user,
-  meta,
-  contestant,
-  primary,
-  id = undefined,
-  element = undefined,
-) {
+async function submitVote(user, meta, contestant, primary, id = undefined) {
   const obj = {
     game: meta.game,
     year: meta.year,
@@ -251,10 +248,6 @@ async function submitVote(
   const { data, error } = await db.from("Votes").upsert(obj).select();
   if (error) {
     console.error(error);
-  }
-  if (data) {
-    element.dataset.id = data[0].id;
-    element.dataset.contestant = contestant;
   }
   return data;
 }

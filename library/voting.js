@@ -100,8 +100,8 @@ function snapToContestant(vote, contestant) {
 
   vote.style.zIndex = 1000;
   vote.style.position = "absolute";
-  vote.style.left = `calc(50% - ${vote.offsetWidth / 2}px)`;
-  vote.style.top = `calc(50% - ${vote.offsetHeight / 2}px)`;
+  vote.style.left = `1rem`;
+  vote.style.top = `1rem`;
 }
 
 function createVotes(user, primary, amount, votesDB) {

@@ -34,7 +34,7 @@ game.eliminate("Jonas");
 game.eliminate("Kevin");
 // game.quit("Hampus");
 game.eliminate("Nowaleya");
-// game.eliminate("Angelica");
+game.eliminate("Angelica");
 
 game.lock();
 

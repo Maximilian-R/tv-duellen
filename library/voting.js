@@ -66,7 +66,6 @@ async function start() {
   });
 
   createFloatingVotes([...primaryVotes, ...secondaryVotes]);
-  createVibrate();
 
   function setupDrag() {
     const draggables = document.querySelectorAll(".draggable-box");
@@ -75,10 +74,6 @@ async function start() {
     let offsetX = 0;
     let offsetY = 0;
     let snapTarget = null;
-
-    document.addEventListener("touchend", () =>
-      document.querySelector("label").click(),
-    );
 
     draggables.forEach((box) => {
       box.addEventListener("mousedown", startDrag);
@@ -297,16 +292,17 @@ function createFloatingVotes(votes) {
   });
 }
 
-function createVibrate() {
-  const input = document.createElement("input");
-  input.type = "checkbox";
-  input.id = "haptic-switch";
-  input.setAttribute("switch", "");
-  input.style.display = "none";
-  document.body.appendChild(input);
+// Doesnt work on touchend when above a scroll threshold, ios only allows vibration to play if it was a pure touchend like a tap
+// function createVibrate() {
+//   const input = document.createElement("input");
+//   input.type = "checkbox";
+//   input.id = "haptic-switch";
+//   input.setAttribute("switch", "");
+//   input.style.display = "none";
+//   document.body.appendChild(input);
 
-  const label = document.createElement("label");
-  label.htmlFor = "haptic-switch";
-  label.style.display = "none";
-  document.body.appendChild(label);
-}
+//   const label = document.createElement("label");
+//   label.htmlFor = "haptic-switch";
+//   label.style.display = "none";
+//   document.body.appendChild(label);
+// }

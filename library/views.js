@@ -57,11 +57,18 @@ export function createGame(game) {
   return html`${createHeader(game)}${createMain(game)}`;
 }
 
-export function createHeader({ meta, emojis }) {
+export function createHeader({ meta, emojis, logo }) {
   return html`
     <header>
       <a class="home" href="../../../">Tillbaka</a>
-      <h1 class="neon-sign">${unsafeHTML(meta.title ?? meta.name)}</h1>
+      ${logo
+        ? html`<div id="logotype-image">
+            <img src="../../../images/${logo}" />
+          </div>`
+        : html`<h1 class="neon-sign">
+            ${unsafeHTML(meta.title ?? meta.name)}
+          </h1>`}
+
       <h2>${meta.year}${meta.versionPath ? " " + meta.versionTitle : ""}</h2>
       ${createEmojis(emojis)}
     </header>

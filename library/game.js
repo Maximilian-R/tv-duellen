@@ -78,6 +78,7 @@ export class Game {
     emojis,
     displayPosition = true,
     fallbackImage = null,
+    logo = null,
   ) {
     this.meta = {
       version: 1,
@@ -89,6 +90,7 @@ export class Game {
     this.contestants = [];
     this.defaultImageFormat = ".webp";
     this.fallbackImage = fallbackImage;
+    this.logo = logo;
     this.theme = theme;
     this.displayPosition = displayPosition;
     this.locked = false;

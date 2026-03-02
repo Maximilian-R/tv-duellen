@@ -13,6 +13,8 @@ export class Robinson extends Game {
       ["robinson", "rounded"],
       ["🌴", "🥥", "🔥"],
       false,
+      null,
+      "../../../images/robinson.png",
     );
   }
 }

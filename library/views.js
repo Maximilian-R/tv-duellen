@@ -63,7 +63,7 @@ export function createHeader({ meta, emojis, logo }) {
       <a class="home" href="../../../">Tillbaka</a>
       ${logo
         ? html`<div id="logotype-image">
-            <img src="../../../images/${logo}" />
+            <img src="${logo}" />
           </div>`
         : html`<h1 class="neon-sign">
             ${unsafeHTML(meta.title ?? meta.name)}

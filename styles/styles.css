@@ -101,16 +101,33 @@
       transform 200ms ease-in-out;
   }
 
-  [data-live]::before {
-    content: "LIVE";
+  [data-live]::before,
+  [data-soon]::before,
+  [data-open]::before {
     position: absolute;
     top: -0.5rem;
     right: -0.5rem;
-    background-color: red;
-    color: white;
     font-size: 0.5rem;
     padding: 0.2rem 0.3rem;
     border-radius: 0.3rem;
+  }
+
+  [data-live]::before {
+    content: "LIVE";
+    background-color: red;
+    color: white;
+  }
+
+  [data-soon]::before {
+    content: "COMING SOON";
+    background-color: white;
+    color: black;
+  }
+
+  [data-open]::before {
+    content: "VOTING OPEN";
+    background-color: #78f89b;
+    color: black;
   }
 
   a:focus-visible,

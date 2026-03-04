@@ -83,6 +83,12 @@ export default {
                             data-live=${program.data.game.isLive()
                               ? ""
                               : nothing}
+                            data-soon=${program.data.game.isComingSoon()
+                              ? ""
+                              : nothing}
+                            data-open=${program.data.game.isVotingOpen()
+                              ? ""
+                              : nothing}
                             >${program.data.game.meta.year}${program.data.game
                               .meta.versionPath
                               ? " " + program.data.game.meta.versionTitle

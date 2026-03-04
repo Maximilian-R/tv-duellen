@@ -8,6 +8,7 @@ import { game as Robinson20241 } from "../../program/robinson/2024-1/index.js";
 import { game as Robinson20242 } from "../../program/robinson/2024-2/index.js";
 import { game as Robinson20251 } from "../../program/robinson/2025-1/index.js";
 import { game as Robinson20252 } from "../../program/robinson/2025-2/index.js";
+import { game as Robinson20261 } from "../../program/robinson/2026-1/index.js";
 import { game as Mello2024 } from "../../program/melodifestivalen/2024/index.js";
 import { game as Mello2025 } from "../../program/melodifestivalen/2025/index.js";
 import { game as Mello2026 } from "../../program/melodifestivalen/2026/index.js";
@@ -24,6 +25,7 @@ export default [
   Robinson20242,
   Robinson20251,
   Robinson20252,
+  Robinson20261,
   Mello2024,
   Mello2025,
   Mello2026,

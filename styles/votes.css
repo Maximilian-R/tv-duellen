@@ -110,7 +110,7 @@
   --index: 7;
 }
 
-.vote[data-name="GUEST"] {
+.vote[data-name="NRL"] {
   --vote-color: rgb(240, 126, 126);
   --index: 8;
 }

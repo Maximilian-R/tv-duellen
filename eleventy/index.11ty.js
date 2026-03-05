@@ -80,14 +80,8 @@ export default {
                         html`<li>
                           <a
                             href=".${program.page.url}"
-                            data-live=${program.data.game.isLive()
-                              ? ""
-                              : nothing}
-                            data-soon=${program.data.game.isComingSoon()
-                              ? ""
-                              : nothing}
-                            data-open=${program.data.game.isVotingOpen()
-                              ? ""
+                            data-badge=${program.data.game.badge
+                              ? program.data.game.badge
                               : nothing}
                             >${program.data.game.meta.year}${program.data.game
                               .meta.versionPath

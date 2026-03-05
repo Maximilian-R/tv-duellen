@@ -23,6 +23,7 @@ game.contestant("Jonas");
 game.contestant("Lasse");
 game.contestant("Sonja");
 
+game.badge = "soon";
 game.lock();
 
 export { game };

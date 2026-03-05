@@ -101,9 +101,7 @@
       transform 200ms ease-in-out;
   }
 
-  [data-live]::before,
-  [data-soon]::before,
-  [data-open]::before {
+  [data-badge]::before {
     position: absolute;
     top: -0.5rem;
     right: -0.5rem;
@@ -112,22 +110,28 @@
     border-radius: 0.3rem;
   }
 
-  [data-live]::before {
+  [data-badge="live"]::before {
     content: "LIVE";
     background-color: red;
     color: white;
   }
 
-  [data-soon]::before {
+  [data-badge="soon"]::before {
     content: "COMING SOON";
     background-color: white;
     color: black;
   }
 
-  [data-open]::before {
+  [data-badge="open"]::before {
     content: "VOTING OPEN";
     background-color: #78f89b;
     color: black;
+  }
+
+  [data-badge="closed"]::before {
+    content: "VOTING CLOSED";
+    background-color: red;
+    color: white;
   }
 
   a:focus-visible,

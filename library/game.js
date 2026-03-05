@@ -175,23 +175,9 @@ export class Game {
     };
   }
 
-  isComingSoon() {
-    return (
-      this.contestants.every(
-        (contestant) => contestant.state === PLAYER_STATE.PLAYING,
-      ) && !this.isVotingOpen()
-    );
-  }
-
-  isVotingOpen() {
-    return !this.locked;
-  }
-
   isLive() {
-    return (
-      this.contestants.some(
-        (contestant) => contestant.state === PLAYER_STATE.PLAYING,
-      ) && !this.isComingSoon()
+    return this.contestants.some(
+      (contestant) => contestant.state === PLAYER_STATE.PLAYING,
     );
   }
 

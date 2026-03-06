@@ -15,7 +15,7 @@ game.contestant("Sanna Nielsen");
 game.contestant("Meira Omar");
 game.contestant("Robin Bengtsson");
 
-game.badge = "open";
-// game.lock();
+game.badge = "closed";
+game.lock();
 
 export { game };

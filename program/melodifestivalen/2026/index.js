@@ -2,11 +2,11 @@ import { Melodifestivalen } from "../index.js";
 
 const game = new Melodifestivalen(2026);
 
-game.contestant("Greczula");
+game.contestant("Greczula").eliminate(2);
 game.contestant("A-teens");
-game.contestant("Felicia");
+game.contestant("Felicia").win();
 game.contestant("Brandsta City Släckers");
-game.contestant("Medina");
+game.contestant("Medina").eliminate(3);
 game.contestant("Saga");
 game.contestant("Smash Into Pieces");
 game.contestant("Cimberly");

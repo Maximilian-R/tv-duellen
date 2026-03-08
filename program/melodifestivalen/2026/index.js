@@ -3,19 +3,18 @@ import { Melodifestivalen } from "../index.js";
 const game = new Melodifestivalen(2026);
 
 game.contestant("Greczula").eliminate(2);
-game.contestant("A-teens");
+game.contestant("A-teens").eliminate(7);
 game.contestant("Felicia").win();
-game.contestant("Brandsta City Släckers");
+game.contestant("Brandsta City Släckers").eliminate(5);
 game.contestant("Medina").eliminate(3);
-game.contestant("Saga");
-game.contestant("Smash Into Pieces");
-game.contestant("Cimberly");
-game.contestant("Lilla Al Fadji");
-game.contestant("Sanna Nielsen");
-game.contestant("Meira Omar");
-game.contestant("Robin Bengtsson");
+game.contestant("Saga").eliminate(12);
+game.contestant("Smash Into Pieces").eliminate(4);
+game.contestant("Cimberly").eliminate(6);
+game.contestant("Lilla Al Fadji").eliminate(8);
+game.contestant("Sanna Nielsen").eliminate(10);
+game.contestant("Meira Omar").eliminate(9);
+game.contestant("Robin Bengtsson").eliminate(11);
 
-game.badge = "closed";
 game.lock();
 
 export { game };

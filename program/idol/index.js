@@ -6,7 +6,6 @@ export class Idol extends Game {
       { name: "Idol", year, secondaryVotes },
       ["idol", "rounded", "theme-white"],
       ["🎙️", "✨", "🎶"],
-      false,
     );
   }
 }

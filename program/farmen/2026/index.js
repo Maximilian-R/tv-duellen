@@ -39,6 +39,8 @@ game.eliminate("Amanda");
 game.eliminate("Niklas");
 game.eliminate("Jenny");
 game.eliminate("Bosse");
+game.eliminate("Vanessa");
+game.eliminate("Erik");
 
 game.lock();
 game.badge = "live";

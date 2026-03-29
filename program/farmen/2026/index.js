@@ -41,8 +41,12 @@ game.eliminate("Jenny");
 game.eliminate("Bosse");
 game.eliminate("Vanessa");
 game.eliminate("Erik");
+game.eliminate("Jörgen");
+game.eliminate("Stephanie");
+game.eliminate("Ahmed");
+
+game.win("Alexander");
 
 game.lock();
-game.badge = "live";
 
 export { game };

@@ -1,0 +1,26 @@
+import { Forradarna } from "../index.js";
+
+const game = new Forradarna(2026);
+
+const traitor = "🎭";
+
+game.contestant("Adelina");
+game.contestant("Anna");
+game.contestant("Carl");
+game.contestant("Dan");
+game.contestant("Elaf");
+game.contestant("Gunnar");
+game.contestant("Henrik");
+game.contestant("Johan");
+game.contestant("Julia");
+game.contestant("Luay");
+game.contestant("Mona");
+game.contestant("Parham");
+game.contestant("Patrik");
+game.contestant("Sebastian");
+game.contestant("Simi");
+game.contestant("Tilda");
+
+game.lock();
+
+export { game };

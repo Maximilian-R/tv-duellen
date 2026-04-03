@@ -21,6 +21,7 @@ game.contestant("Sebastian");
 game.contestant("Simi");
 game.contestant("Tilda");
 
+game.badge = "soon";
 game.lock();
 
 export { game };

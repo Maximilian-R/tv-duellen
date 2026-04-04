@@ -20,6 +20,11 @@ game.contestant("Patrik");
 game.contestant("Sebastian");
 game.contestant("Simi");
 game.contestant("Tilda");
+game.contestant("Bibi");
+game.contestant("Jonna");
+game.contestant("Miriam");
+
+game.contestant("Torbjörn");
 
 game.badge = "soon";
 game.lock();

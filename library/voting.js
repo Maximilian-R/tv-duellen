@@ -38,11 +38,21 @@ async function start() {
   }
 
   try {
-    const votesDB = await getUserVotes(user.id, meta);
-    const primaryVotes = createVotes(user.id, true, meta.primary, votesDB);
-    const secondaryVotes = createVotes(user.id, false, meta.secondary, votesDB);
+    const votesDB = await getUserVotes(meta);
+
+    const myVotesDB = votesDB.filter((vote) => vote.user === user.id);
+    const othersVotesDB = votesDB.filter((vote) => vote.user !== user.id);
+
+    const primaryVotes = createVotes(user.id, true, meta.primary, myVotesDB);
+    const secondaryVotes = createVotes(
+      user.id,
+      false,
+      meta.secondary,
+      myVotesDB,
+    );
 
     createDraggableVotes([...primaryVotes, ...secondaryVotes]);
+    createViewableVotes(othersVotesDB);
 
     setupDraggables();
   } catch (error) {
@@ -58,14 +68,13 @@ async function getUser(id) {
   return data[0];
 }
 
-async function getUserVotes(user, meta) {
+async function getUserVotes(meta) {
   const { data, error } = await db
     .from("Votes")
     .select("*")
     .eq("game", meta.game)
     .eq("year", meta.year)
-    .eq("version", meta.version)
-    .eq("user", user);
+    .eq("version", meta.version);
   if (error) {
     throw error;
     console.error(error);
@@ -121,6 +130,23 @@ function createVotes(user, primary, amount, votesDB) {
       contestant: voteDB?.contestant,
       id: voteDB?.id,
     };
+  });
+}
+
+function createViewableVotes(votes) {
+  votes.forEach((vote) => {
+    const { user, primary, contestant } = vote;
+    const child = document.createElement("div");
+    child.className = "vote";
+    child.dataset.contestant = contestant;
+    child.dataset.name = user;
+    child.dataset.primary = primary;
+    child.textContent = user;
+
+    const target = document.querySelector(
+      `li[data-contestant="${contestant}"] .votes`,
+    );
+    target.appendChild(child);
   });
 }
 

@@ -31,6 +31,10 @@ picture .img {
   /* vertical-align: middle; */
 }
 
+.baby picture .img {
+  aspect-ratio: 1 / 1;
+}
+
 .baby .img.error::before {
   content: "👶";
   font-size: 2rem;

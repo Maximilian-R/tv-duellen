@@ -44,3 +44,7 @@
   --theme-background-color: #590808;
   --theme-background-image: url("../images/curtain2560x1440.png");
 }
+
+.baby {
+  --theme-background-color: #ace8f8;
+}

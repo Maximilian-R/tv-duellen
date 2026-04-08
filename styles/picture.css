@@ -31,6 +31,15 @@ picture .img {
   /* vertical-align: middle; */
 }
 
+.baby .img.error::before {
+  content: "👶";
+  font-size: 2rem;
+}
+
+.baby picture .img {
+  background-color: #fbe1ee;
+}
+
 picture::before {
   position: absolute;
   content: "";

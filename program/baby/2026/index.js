@@ -32,7 +32,7 @@ game.contestant("6 maj");
 game.contestant("7 maj");
 game.contestant("8 maj");
 
-game.badge = "open";
-// game.lock();
+game.badge = "live";
+game.lock();
 
 export { game };

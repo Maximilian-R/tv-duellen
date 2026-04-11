@@ -2,7 +2,8 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "sync": "node library/fetch-votes.js"
+    "sync": "node library/fetch-votes.js",
+    "webp": "node to-webp.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",

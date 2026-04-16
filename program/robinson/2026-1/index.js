@@ -4,7 +4,7 @@ const game = new Robinson(2026, 1, "Vår");
 
 game.contestant("Anna");
 game.contestant("Aydin").quit();
-game.contestant("Erika");
+game.contestant("Erika").quit();
 game.contestant("Iki");
 game.contestant("Marie");
 game.contestant("Anja");
@@ -14,7 +14,7 @@ game.contestant("Sebastian");
 game.contestant("Waldo").quit();
 game.contestant("Aza");
 game.contestant("Carl-Oscar");
-game.contestant("Lema");
+game.contestant("Lema").quit();
 game.contestant("Mensur");
 game.contestant("Ola");
 game.contestant("Amadeus");
@@ -27,5 +27,7 @@ game.contestant("Carolina");
 game.contestant("Halil");
 
 game.badge = "open";
+
+game.eliminate("Anja");
 
 export { game };

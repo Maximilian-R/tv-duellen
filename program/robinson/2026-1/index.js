@@ -29,5 +29,6 @@ game.contestant("Halil");
 game.badge = "open";
 
 game.eliminate("Anja");
+game.eliminate("Sebastian");
 
 export { game };

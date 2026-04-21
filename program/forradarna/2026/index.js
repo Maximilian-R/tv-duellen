@@ -16,17 +16,18 @@ game.contestant("Julia");
 game.contestant("Luay");
 game.contestant("Mona");
 game.contestant("Parham");
-game.contestant("Patrik");
+game.contestant("Patrik", traitor);
 game.contestant("Sebastian");
 game.contestant("Simi");
 game.contestant("Tilda");
 game.contestant("Bibi");
 game.contestant("Jonna");
 game.contestant("Miriam");
-
-game.contestant("Torbjörn");
+game.contestant("Torbjörn", traitor);
 
 game.badge = "soon";
 game.lock();
+
+game.eliminate("Henrik").reason("MURDER");
 
 export { game };

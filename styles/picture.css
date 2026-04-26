@@ -85,6 +85,10 @@ picture[state="ELIMINATED"]::after {
 picture[reason="MURDER"]::after {
 }
 
+picture[reason="EMPTY"]::after {
+  background-image: none;
+}
+
 picture[position]::after {
   content: attr(position);
   background-image: none;

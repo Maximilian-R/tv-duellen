@@ -11,4 +11,12 @@ export class Baby extends Game {
   }
 
   sortContestants() {}
+
+  win(name) {
+    super.win(name);
+
+    this.contestants
+      .filter((c) => c.name !== name)
+      .forEach((c) => c.eliminate(2, "EMPTY"));
+  }
 }

@@ -35,4 +35,6 @@ game.contestant("8 maj");
 game.badge = "live";
 game.lock();
 
+game.win("23 april", true);
+
 export { game };

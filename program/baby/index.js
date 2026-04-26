@@ -17,6 +17,6 @@ export class Baby extends Game {
 
     this.contestants
       .filter((c) => c.name !== name)
-      .forEach((c) => c.eliminate(2, "EMPTY"));
+      .forEach((c) => c.eliminate(null, "EMPTY"));
   }
 }

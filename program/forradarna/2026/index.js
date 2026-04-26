@@ -25,8 +25,8 @@ game.contestant("Jonna");
 game.contestant("Miriam");
 game.contestant("Torbjörn", traitor);
 
-game.badge = "soon";
-game.lock();
+game.badge = "open";
+// game.lock();
 
 game.eliminate("Henrik").reason("MURDER");
 

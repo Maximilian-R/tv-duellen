@@ -30,5 +30,6 @@ game.badge = "open";
 
 game.eliminate("Anja");
 game.eliminate("Sebastian");
+game.eliminate("Carl-Oscar");
 
 export { game };

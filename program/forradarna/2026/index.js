@@ -22,12 +22,15 @@ game.contestant("Simi");
 game.contestant("Tilda");
 game.contestant("Bibi");
 game.contestant("Jonna");
-game.contestant("Miriam");
+game.contestant("Miriam", traitor);
 game.contestant("Torbjörn", traitor);
 
 game.badge = "open";
 // game.lock();
 
 game.eliminate("Henrik").reason("MURDER");
+game.eliminate("Elaf");
+game.eliminate("Jonna").reason("MURDER");
+game.eliminate("Bibi");
 
 export { game };

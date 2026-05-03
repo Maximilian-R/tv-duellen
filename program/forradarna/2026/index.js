@@ -18,7 +18,7 @@ game.contestant("Mona");
 game.contestant("Parham");
 game.contestant("Patrik", traitor);
 game.contestant("Sebastian");
-game.contestant("Simi");
+game.contestant("Simi").quit();
 game.contestant("Tilda");
 game.contestant("Bibi");
 game.contestant("Jonna");
@@ -32,5 +32,6 @@ game.eliminate("Henrik").reason("MURDER");
 game.eliminate("Elaf");
 game.eliminate("Jonna").reason("MURDER");
 game.eliminate("Bibi");
+game.eliminate("Adelina").reason("MURDER");
 
 export { game };

@@ -26,10 +26,12 @@ game.contestant("Sonja");
 game.contestant("Carolina");
 game.contestant("Halil");
 
-game.badge = "open";
+game.badge = "live";
+game.lock();
 
 game.eliminate("Anja");
 game.eliminate("Sebastian");
 game.eliminate("Carl-Oscar");
+game.eliminate("Nathalie");
 
 export { game };

@@ -25,8 +25,8 @@ game.contestant("Jonna");
 game.contestant("Miriam", traitor);
 game.contestant("Torbjörn", traitor);
 
-game.badge = "open";
-// game.lock();
+game.badge = "live";
+game.lock();
 
 game.eliminate("Henrik").reason("MURDER");
 game.eliminate("Elaf");
@@ -36,5 +36,7 @@ game.eliminate("Adelina").reason("MURDER");
 game.eliminate("Gunnar");
 game.eliminate("Dan").reason("MURDER");
 game.eliminate("Julia");
+game.eliminate("Sebastian").reason("MURDER");
+game.eliminate("Luay");
 
 export { game };

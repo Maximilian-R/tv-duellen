@@ -33,5 +33,9 @@ game.eliminate("Anja");
 game.eliminate("Sebastian");
 game.eliminate("Carl-Oscar");
 game.eliminate("Nathalie");
+game.eliminate("Anna");
+game.eliminate("Aza");
+game.eliminate("Lasse");
+game.eliminate("Halil");
 
 export { game };

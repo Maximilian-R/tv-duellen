@@ -37,5 +37,8 @@ game.eliminate("Anna");
 game.eliminate("Aza");
 game.eliminate("Lasse");
 game.eliminate("Halil");
+game.eliminate("Ola");
+game.eliminate("Jonas");
+game.eliminate("Amadeus");
 
 export { game };

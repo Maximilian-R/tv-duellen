@@ -26,7 +26,6 @@ game.contestant("Sonja");
 game.contestant("Carolina");
 game.contestant("Halil");
 
-game.badge = "live";
 game.lock();
 
 game.eliminate("Anja");
@@ -40,5 +39,9 @@ game.eliminate("Halil");
 game.eliminate("Ola");
 game.eliminate("Jonas");
 game.eliminate("Amadeus");
+game.eliminate("Marie");
+game.eliminate("Iki");
+game.eliminate("Carolina");
+game.win("Sonja");
 
 export { game };

@@ -3,7 +3,8 @@
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
     "sync": "node library/fetch-votes.js",
-    "webp": "node to-webp.js"
+    "webp": "node to-webp.js",
+    "rename-images": "node rename-images.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",

@@ -7,12 +7,12 @@
     "rename-images": "node rename-images.js"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "@lit-labs/ssr": "^4.0.0",
-    "@supabase/supabase-js": "^2.98.0",
-    "dotenv": "^17.3.1",
-    "lit-html": "^3.3.2",
-    "sharp": "^0.34.5"
+    "@11ty/eleventy": "^3.1.6",
+    "@lit-labs/ssr": "^4.1.0",
+    "@supabase/supabase-js": "^2.116.0",
+    "dotenv": "^17.4.2",
+    "lit-html": "^3.3.3",
+    "sharp": "^0.35.4"
   },
   "type": "module"
 }

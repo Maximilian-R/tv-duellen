@@ -23,9 +23,11 @@ game.contestant("Siri");
 game.contestant("Sofia");
 game.contestant("Tommy");
 game.contestant("Tove");
-game.contestant("Varg");
+game.contestant("Sebastian");
+game.contestant("Ida");
+game.contestant("Desiree");
 
-game.badge = "soon";
+game.badge = "live";
 // game.lock();
 
 export { game };

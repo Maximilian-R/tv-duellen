@@ -30,4 +30,6 @@ game.contestant("Desiree");
 game.badge = "live";
 // game.lock();
 
+game.eliminate("Sofia");
+
 export { game };

@@ -1,9 +1,15 @@
 import { Game } from "../../library/game.js";
 
 export class Forradarna extends Game {
-  constructor(year) {
+  constructor(year, version, versionTitle) {
     super(
-      { name: "Förrädarna", year },
+      {
+        name: "Förrädarna",
+        year,
+        version: version,
+        versionTitle: versionTitle,
+        versionPath: version,
+      },
       ["förrädarna", "theme-white"],
       ["🎭", "🗡️", "🩸"],
       false,

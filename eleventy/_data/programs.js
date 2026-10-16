@@ -15,7 +15,8 @@ import { game as Mello2024 } from "../../program/melodifestivalen/2024/index.js"
 import { game as Mello2025 } from "../../program/melodifestivalen/2025/index.js";
 import { game as Mello2026 } from "../../program/melodifestivalen/2026/index.js";
 import { game as Förrädarna2025 } from "../../program/forradarna/2025/index.js";
-import { game as Förrädarna2026 } from "../../program/forradarna/2026/index.js";
+import { game as Förrädarna20261 } from "../../program/forradarna/2026-1/index.js";
+import { game as Förrädarna20262 } from "../../program/forradarna/2026-2/index.js";
 import { game as Baby2026 } from "../../program/baby/2026/index.js";
 
 export default [
@@ -36,6 +37,7 @@ export default [
   Mello2025,
   Mello2026,
   Förrädarna2025,
-  Förrädarna2026,
+  Förrädarna20261,
+  Förrädarna20262,
   Baby2026,
 ];

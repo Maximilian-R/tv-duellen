@@ -1,6 +1,6 @@
 import { Forradarna } from "../index.js";
 
-const game = new Forradarna(2026);
+const game = new Forradarna(2026, 1, "Vår");
 
 const traitor = "🎭";
 

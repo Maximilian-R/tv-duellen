@@ -31,5 +31,8 @@ game.badge = "live";
 // game.lock();
 
 game.eliminate("Sofia");
+game.eliminate("Moa");
+game.eliminate("Claudia");
+game.eliminate("Tove");
 
 export { game };

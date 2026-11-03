@@ -21,4 +21,7 @@ game.contestant("Ville");
 
 game.badge = "live";
 
+game.eliminate("My", "Elliot", "Moa", "Liam");
+game.eliminate("Theo", "Armin");
+
 export { game };

@@ -2,8 +2,8 @@ import { Robinson } from "../index.js";
 
 const game = new Robinson(2026, 2, "Höst");
 
-game.contestant("Baran");
-game.contestant("Celine");
+game.contestant("Baran").quit();
+game.contestant("Celine").quit();
 game.contestant("Christoffer");
 game.contestant("Claudia");
 game.contestant("Devin");
@@ -12,7 +12,7 @@ game.contestant("Fredrik");
 game.contestant("Jessica");
 game.contestant("Juliette");
 game.contestant("Maria");
-game.contestant("Martin");
+game.contestant("Martin").quit();
 game.contestant("Matilda");
 game.contestant("Milo");
 game.contestant("Moa");
@@ -34,5 +34,8 @@ game.eliminate("Sofia");
 game.eliminate("Moa");
 game.eliminate("Claudia");
 game.eliminate("Tove");
+game.eliminate("Siri");
+game.eliminate("Desiree");
+game.eliminate("Ida");
 
 export { game };

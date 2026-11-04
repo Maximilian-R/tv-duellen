@@ -33,9 +33,9 @@ game.badge = "live";
 game.eliminate("Sofia");
 game.eliminate("Moa");
 game.eliminate("Claudia");
-game.eliminate("Tove");
-game.eliminate("Siri");
 game.eliminate("Desiree");
 game.eliminate("Ida");
+game.eliminate("Christoffer");
+game.eliminate("Siri");
 
 export { game };
